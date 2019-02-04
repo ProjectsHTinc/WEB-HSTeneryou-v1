@@ -30,7 +30,7 @@ html {
   body {
     position: relative;
     margin: 0;
-    padding-bottom: 1rem;
+    /* padding-bottom: 1rem; */
     min-height: 100%;
     font-family: 'Roboto', sans-serif;
   
@@ -42,11 +42,13 @@ html {
 }
 .footer_section{
     background-color: #2171b9;
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     padding-top: 5px;
     padding-bottom: 5px;
+    margin-top: 30px;
+
 }
 .label_question{
     font-size: 14px;
@@ -94,7 +96,7 @@ html {
     
 }
 .home_box{
-    border: 2px solid #fff;
+   
     margin-top: -150px;
     position: relative;    
     margin-bottom: 0px;
@@ -114,7 +116,7 @@ html {
 
 .home_text{
     font-weight: 700;
-    color: #fff;
+    color: #2171b9;
     margin-top:10px;
 }
 .form_heading{
@@ -1066,6 +1068,12 @@ tr td{
          background-position: center;
      }
     
+     .p_text_box{
+        margin-right: 0px;
+     }
+     .d_direction_div{
+        margin-right: 0px;
+     }
      .living_area_question{
         margin-top: 220px;
      }

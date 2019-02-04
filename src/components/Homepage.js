@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import  VideoCover  from 'react-video-cover';
+import home_banner from './images/home_banner.jpg';
 // import sample_video from './images/sample.mp4';
 
 // import sample_video from 'https://media.w3.org/2010/05/sintel/trailer_hd.mp4';
@@ -15,7 +16,7 @@ class Homepage extends Component {
 
   componentDidMount() {
    
-    setTimeout(() => this.setState({ loading: false }), 3000);
+    setTimeout(() => this.setState({ loading: false }), 1000);
   }
 
 
@@ -41,14 +42,7 @@ class Homepage extends Component {
      
       <div className="container-fluid wrapper">
    
-        {/* <div className="row ">
-          <div className="logo">
-            <a href="/">
-              <img src={require('./images/logo_1.png')} alt="ENER YOU" className="" />
-            </a>
-
-          </div>
-        </div> */}
+{/*        
         <div className="container ">
           <div className="row">
             <div className="logo">
@@ -58,16 +52,20 @@ class Homepage extends Component {
             </div>
           </div>
 
-        </div>
+        </div> */}
    
-        <div style={{
-          width: '100%',
-          height: '100vh',
-          overflow: 'hidden',
-        }}>
-          <VideoCover autoPlay
-            videoOptions={videoOptions}
-          />
+        <div className="container-fluid"  style={{
+                                backgroundImage: 'url(' + home_banner + ')',
+                                backgroundSize:'cover', backgroundPosition:'center',                           
+                                height: '100vh',
+                                backgroundRepeat: 'no-repeat'
+                            }}  >
+                             <div className="row h-100 justify-content-center align-items-center">
+                             <a href="/">
+                                       <img src={require('./images/home_logo.png')} alt="ENER YOU" className=""/> 
+                                </a>
+                             </div>
+      
         </div>
         <div className="container">
         <div class="row">
@@ -78,7 +76,7 @@ class Homepage extends Component {
            <a href="/Form">
            <img src={require('./images/home_icon.png')} alt="ENER YOU" className=""/> 
            </a>
-           <p className="home_text">Find your personalized Energy Solutions for your house</p>
+           <p className="home_text">Finden Sie die passenden Energielösungen für Ihre Immobile</p>
            </p>
           
         </div>

@@ -82,7 +82,10 @@ class Economicgraph extends Component {
                         <tbody>
                             <tr>
                                 <td>Komponenten</td>
-                                <td>Reference System</td>
+                                <td>Strom aus dem Netz<br></br>
+                                    Gaskessel<br></br>
+                                    Wärmespeicher<br></br>
+                                    (Referenzsystem)</td>
                                 <td>Photovoltaik<br></br>
                                     Pelletkessel<br></br>
                                     Wärmespeicher

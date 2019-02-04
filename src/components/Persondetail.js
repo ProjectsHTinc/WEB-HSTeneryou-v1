@@ -232,24 +232,36 @@ class Persondetail extends Component {
 
 
                 {/* Progress Bar section Starts here */}
-                <div className="row progress_section" style={{marginTop:'25px'}}>
-                <div className="col-sm-12 col-lg-2">
-                    <div className="char_next_btn_section">
-                            <div className="">                               
-                                <div className="back_btn_form_2">
-                                <button onClick={this.back} className="btn btn_next pull_left"><i class="fa fa-angle-left fa-1x" aria-hidden="true"></i>  &nbsp; zurück  </button>
-                                </div>
-                           </div> 
-                     </div>
-                 </div>
-                <div className="col-sm-12 col-lg-8"></div>
-                <div className="col-sm-12 col-lg-2">    
-                    <div className="next_section">
-                        <button onClick={this.continue}  ref="but" className="btn btn_next pull_left">weiter  &nbsp; <i class="fa fa-angle-right fa-1x" aria-hidden="true"></i> </button>
-                    </div>               
                
-                </div> 
-                </div>
+                      
+                        <div className="row progress_section" style={{ marginTop: '30px' }}>
+                            <div className="col-md-2">
+                                <div className="char_next_btn_section">
+                                    <div className="">
+
+                                        <div className="back_btn_form_2">
+                                        <button onClick={this.back} className="btn btn_next pull_left"><i class="fa fa-angle-left fa-1x" aria-hidden="true"></i>  &nbsp; zurück  </button>
+                                        </div>
+                                    </div>
+
+
+
+
+                                </div>
+
+                            </div>
+                            <div className="col-md-8">
+                               
+                            </div>
+                            <div className="col-md-2 text-center">
+                                <div className="next_section">
+                                <button onClick={this.continue}  ref="but" className="btn btn_next pull_left">weiter  &nbsp; <i class="fa fa-angle-right fa-1x" aria-hidden="true"></i> </button>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        
                
                 {/* Progress Bar section Ends here */}
 
