@@ -45,19 +45,19 @@ class Enerydemand extends Component {
 
             if (!yearlyGasDemand.match(/^[1-9][0-9]*$/)) {
                 formIsValid = false;
-                errors["yearlyGasDemand"] = "Bitte geben Sie nur Zahlen ein";
+                errors["yearlyGasDemand"] = "Bitte nur Zahlen eingeben";
             }
             if (yearlyGasDemand <= 6999) {
                 formIsValid = false;
-                errors["yearlyGasDemand"] = "Größer als gleich 7000";
+                errors["yearlyGasDemand"] = "Bitte nicht weniger als 7.000 kWh/a";
             }
             if (yearlyGasDemand >= 52001) {
                 formIsValid = false;
-                errors["yearlyGasDemand"] = "Nicht mehr als 52000";
+                errors["yearlyGasDemand"] = "Bitte nicht mehr als 52.000 kWh/a";
             }
             if (!yearlyGasDemand) {
                 formIsValid = false;
-                errors["yearlyGasDemand"] = "Bitte geben Ihre jährliche Gas- oder Heizölmenge ein";
+                errors["yearlyGasDemand"] = "Bitte Ihre jährliche Gas- oder Heizölmenge eingeben";
             }
         }
         if (energy_demand === 'ENERGY_CERTIFICATE') {
@@ -66,36 +66,36 @@ class Enerydemand extends Component {
 
             if (!yearlyEnergyDemand.match(/^[1-9][0-9]*$/)) {
                 formIsValid = false;
-                errors["yearlyEnergyDemand"] = "Bitte geben Sie nur Zahlen ein";
+                errors["yearlyEnergyDemand"] = "Bitte nur Zahlen eingeben";
             }
             if (yearlyEnergyDemand <= 6999) {
                 formIsValid = false;
-                errors["yearlyEnergyDemand"] = "Größer als gleich 7000";
+                errors["yearlyEnergyDemand"] = "Bitte nicht weniger als 7.000 kWh/a";
             }
             if (yearlyEnergyDemand >= 52001) {
                 formIsValid = false;
-                errors["yearlyEnergyDemand"] = "Nicht mehr als 52000";
+                errors["yearlyEnergyDemand"] = "Bitte nicht mehr als 52.000 kWh/a";
             }
             if (!yearlyEnergyDemand) {
                 formIsValid = false;
-                errors["yearlyEnergyDemand"] = "Bitte geben Ihre Energieverbrauch ein";
+                errors["yearlyEnergyDemand"] = "Bitte Ihren Energieverbrauch eingeben";
             }
 
             if (!yearlyEnergyDemandOnWater.match(/^[1-9][0-9]*$/)) {
                 formIsValid = false;
-                errors["yearlyEnergyDemandOnWater"] = "Bitte geben Sie nur Zahlen ein";
+                errors["yearlyEnergyDemandOnWater"] = "Bitte nur Zahlen eingeben";
             }
             if (yearlyEnergyDemandOnWater >= 5001) {
                 formIsValid = false;
-                errors["yearlyEnergyDemandOnWater"] = "Nicht mehr als 5000";
+                errors["yearlyEnergyDemandOnWater"] = "Bitte nicht mehr als 5.000 kWh/a";
             }
             if (yearlyEnergyDemandOnWater <= 99) {
                 formIsValid = false;
-                errors["yearlyEnergyDemandOnWater"] = "Größer als gleich 100";
+                errors["yearlyEnergyDemandOnWater"] = "Bitte nicht weniger als 100 kWh/a";
             }
             if (!yearlyEnergyDemandOnWater) {
                 formIsValid = false;
-                errors["yearlyEnergyDemandOnWater"] = "Bitter geben Ihre Anteil-Warmwasser ein";
+                errors["yearlyEnergyDemandOnWater"] = "Bitte Ihren Warmwasseranteil eingeben";
             }
         }
 

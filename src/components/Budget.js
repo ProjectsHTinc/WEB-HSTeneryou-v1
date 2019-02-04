@@ -34,21 +34,21 @@ class Budget extends Component {
         let budget_value=this.budget_value.value;
         if (!budget_value.match(/^[1-9][0-9]*$/)) {
             formIsValid = false;            
-            errors["budget_value"] = "Bitte geben Sie nur Zahlen ein";
+            errors["budget_value"] = "Bitte nur Zahlen eingeben";
           }
         if(!budget_value){
         formIsValid = false;
-        errors["budget_value"] = "Bitte geben Ihre Budgetobergrenze ein";
+        errors["budget_value"] = "Bitte Ihre Budgetobergrenze eingeben";
         }
        
         if (budget_value <= 9999) {
             formIsValid = false;
-            errors["budget_value"] = "Größer als gleich 10000";
+            errors["budget_value"] = "Bitte nicht weniger als 10.000 €";
           }
        
           if (budget_value >= 50001) {
             formIsValid = false;
-            errors["budget_value"] = "Nicht mehr als 50000";
+            errors["budget_value"] = "Bitte nicht mehr als 50.000 €";
           }
         
       

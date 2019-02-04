@@ -35,24 +35,24 @@ class Persondetail extends Component {
        
         if(star_val=='0' || star_val==null){
             formIsValid = false;
-            this.setState({ star_errors: "Bitte wählen die Personenanzahl aus" });     
+            this.setState({ star_errors: "Bitte die Personenanzahl eingeben" });     
                  
          } 
          if (!power_val.match(/^[1-9][0-9]*$/)) {
             formIsValid = false;
-            this.setState({ power_error: "Bitte geben Sie nur Zahlen ein" });
+            this.setState({ power_error: "Bitte nur Zahlen eingeben" });
           }
           if (power_val <= 1999) {
             formIsValid = false;
-            this.setState({ power_error: "Größer als 2000"});
+            this.setState({ power_error: "Bitte nicht weniger als 2.000 kWh"});
           }
           if (power_val >= 8001) {
             formIsValid = false;          
-            this.setState({ power_error: "Nicht mehr als 8000"});
+            this.setState({ power_error: "Bitte nicht mehr als 8.000 kWh"});
           }
          if(power_val==''){
             formIsValid = false;
-            this.setState({ power_error: "Bitte geben Sie Ihre jährlicher Strombedarf ein" }); 
+            this.setState({ power_error: "Bitte Ihren jährlichen Strombedarf eingeben" }); 
            
          }
         
