@@ -84,6 +84,7 @@ class Persondetail extends Component {
  
     handleKeyPress = event => {
         if (event.key == 'Enter') {
+           
             this.refs.but.click()
         }
       };
@@ -188,10 +189,10 @@ class Persondetail extends Component {
                                       
                                         <div className="p_consuption">
                                             <p className="power_label">Strombedarf</p>
-                                            <input type="text" name="power_consumption" id="power_consumption" className="power_text_consumption" minLength="5" maxLength='5'
-                                                            placeholder='power_consumption' ref={(power_consumption) => this.power_consumption = power_consumption}
-                                                            onBlur={this.props.handleChange('power_consumption')}
-                                                            defaultValue={values.power_consumption} onKeyPress={this.handleKeyPress} />
+                    <input type="text" name="power_consumption" id="power_consumption" className="power_text_consumption" minLength="5" maxLength='5'
+                                    placeholder='power_consumption' ref={(power_consumption) => this.power_consumption = power_consumption}
+                                    onBlur={this.props.handleChange('power_consumption')}
+                                    defaultValue={values.power_consumption} onKeyPress={this.handleKeyPress} />
                                                           <span className="kwh">kWh</span>  
                                         </div>
                                                  <p style={{textAlign:"center"}} className="error_font">{this.state.power_error}</p>

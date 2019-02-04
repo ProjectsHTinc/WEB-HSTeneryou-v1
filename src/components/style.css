@@ -102,9 +102,9 @@ html {
     margin-bottom: 0px;
 }
 .home_desc{
-    padding-top: 15px;
+    /* padding-top: 15px;
     padding-bottom: 15px;
-    
+     */
 }
 
 .logo_section{
@@ -294,6 +294,7 @@ input[type='radio']:checked:before {
 }                               
 .living_text_box{
     background-color: #2171b9;
+    width: 200px;
     color: #fff;
     border: none;
     letter-spacing: 12px;
@@ -444,7 +445,7 @@ input::placeholder {
 .p_box{
     /* margin: auto;
     width: 50%; */
-    border: 1px solid;
+    /* border: 1px solid; */
     display: inline-flex;
   
     margin-top: 250px;
@@ -938,6 +939,21 @@ tr td{
 
 
 @media only screen and (max-width: 420px) {
+    .p_text_box{
+        margin-right: 0px;
+     }
+     .living_area_box{
+         background-image: none !important;
+
+         
+     }
+     .next_section{
+        width: auto;
+        margin-top: -40px;
+     }
+     .d_direction_div{
+        margin-right: 0px;
+     }
    .hide_tab{
        display: none;
    }
@@ -948,7 +964,8 @@ tr td{
        width: auto;
    }
    .living_area_question{
-    margin-top:190px;
+    margin-top:0px;
+    text-align: center;
    }
    .living_box_house{
     
@@ -1001,16 +1018,6 @@ tr td{
         background-image: none !important;
     }
    
-   
-    
-    
-   
-    /* .next_section{
-        margin-bottom: 10px;
-        margin-top: 25px;
-        text-align: center;
-        width: 100%;
-    } */
     .radio_box{
         margin-bottom: 10px;
     }
@@ -1067,7 +1074,12 @@ tr td{
      .form_1_bg_1{
          background-position: center;
      }
-    
+    .progress_section{
+        margin-top: 90px !important;
+    }
+    .pull_left{
+        float: right;
+    }
      .p_text_box{
         margin-right: 0px;
      }
@@ -1159,6 +1171,10 @@ tr td{
         text-align: center;
         display: inline-grid;
         margin: 50px 0px 20px 200px;
+    }
+    .living_area_box{
+        background-image: none;
+        
     }
     .living_box{
         padding: 8px;
