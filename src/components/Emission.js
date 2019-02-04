@@ -40,6 +40,9 @@ class Emission extends Component {
                         </TabPanel>
                  </Tabs>
                     </div>
+                    <div className="red_box">
+                    <center><span className="rec_box"></span><span className="red_text">Unsere Empfehlung für Sie</span></center>
+                    </div>
                     
                 </div>
                 </div>

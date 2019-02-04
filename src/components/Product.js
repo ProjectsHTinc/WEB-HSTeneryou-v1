@@ -408,12 +408,12 @@ class Product extends Component {
         let graph_7_1 = [];
         let graph_7_2 = [];
 
-        graph_1.push(['', 'Autarkiegrad']);
+        graph_1.push(['', 'Autarkiegrad','']);
         for (i = 1; i < this.state.systemCombinations_value.length; i++) {
             let systemCombinationPosition = String(this.state.systemCombinations_value[i].systemCombinationPosition);
             let energeticValues = this.state.systemCombinations_value[i].energeticValues;
             let energeticSelfSufficiency = Math.round(energeticValues['energeticSelfSufficiency']);
-            graph_1.push([systemCombinationPosition, energeticSelfSufficiency]);
+            graph_1.push([systemCombinationPosition, energeticSelfSufficiency,'']);
         }
 
         graph_2.push(['', 'Self Sufficiency', 'Netzbezug', 'Eigenverbrauch-PV', 'Eigenverbrauch-BHKW', 'Einspeisung-PV', 'Einspeisung-BHKW']);
@@ -434,23 +434,23 @@ class Product extends Component {
             graph_2.push([systemCombinationPosition, energeticSelfSufficiency, energeticNetConsumption, energeticOwnConsumptionPV, energeticOwnConsumptionBHKW, energeticPowerSupplyPV, energeticPowerSupplyBHKW]);
         }
 
-        graph_3_1.push(['', 'Annuitätskosten']);
+        graph_3_1.push(['', 'Annuitätskosten','']);
         for (i = 0; i < this.state.systemCombinations_value.length; i++) {
             let systemCombinationPosition = String(this.state.systemCombinations_value[0].systemCombinationPosition);
             let economicValues = this.state.systemCombinations_value[0].economicValues;
             let annuityCost = economicValues['annuityCost'];
-                graph_3_1.push([systemCombinationPosition, annuityCost]);
+                graph_3_1.push([systemCombinationPosition, annuityCost,'']);
             break;
         }
         for (i = 1; i < this.state.systemCombinations_value.length; i++) {
             let systemCombinationPosition = String(this.state.systemCombinations_value[i].systemCombinationPosition);
             let economicValues = this.state.systemCombinations_value[i].economicValues;
             let annuityCost = economicValues['annuityCost'];
-                graph_3_2.push([systemCombinationPosition, annuityCost]);
+                graph_3_2.push([systemCombinationPosition, annuityCost,'']);
         }
 
 
-        graph_4.push(['', 'annuityCost', 'Investitionskosten', 'Budgetobergrenze (€)']);
+        graph_4.push(['', 'annuityCost', 'Investitionskosten', '','Budgetobergrenze (€)','']);
         //graph_4.push(['', 'annuityCost', 'Investitionskosten', 'Budgetobergrenze (€)']);
         for (i = 1; i < this.state.systemCombinations_value.length; i++) {
             let budget_value_amount = Number(localStorage.getItem('budget_value'));
@@ -462,7 +462,7 @@ class Product extends Component {
         }
 
 
-        graph_5.push(['', 'annuityCost', 'Betriebskosten', 'Brennstoffkosten']);
+        graph_5.push(['', 'annuityCost', 'Betriebskosten','', 'Brennstoffkosten','']);
         //graph_5.push(['', 'annuityCost', 'Betriebskosten', 'Brennstoffkosten']);
         for (i = 1; i < this.state.systemCombinations_value.length; i++) {
             let systemCombinationPosition = String(this.state.systemCombinations_value[i].systemCombinationPosition);
@@ -470,17 +470,17 @@ class Product extends Component {
             let annuityCost = economicValues['annuityCost'];
             let operatingCost = economicValues['operatingCost'];
             let yearlyFuelCost = economicValues['yearlyFuelCost'];
-            graph_5.push([systemCombinationPosition, annuityCost, operatingCost, yearlyFuelCost]);
+            graph_5.push([systemCombinationPosition, annuityCost, operatingCost,'', yearlyFuelCost,'']);
         }
 
-        graph_6_1.push(['', 'annuityCost', 'Stromkosten', 'Heizkosten']);
+        graph_6_1.push(['', 'annuityCost', 'Stromkosten','','Heizkosten','']);
         for (i = 0; i < this.state.systemCombinations_value.length; i++) {
             let systemCombinationPosition = String(this.state.systemCombinations_value[i].systemCombinationPosition);
             let economicValues = this.state.systemCombinations_value[i].economicValues;
             let annuityCost = economicValues['annuityCost'];
             let monthlyHeadingCost = economicValues['monthlyHeadingCost'];
             let monthlyEnergyCost = economicValues['monthlyEnergyCost'];
-            graph_6_1.push([systemCombinationPosition, annuityCost, monthlyEnergyCost, monthlyHeadingCost]);
+            graph_6_1.push([systemCombinationPosition, annuityCost, monthlyEnergyCost,'', monthlyHeadingCost,'']);
             break;
         }
         for (i = 1; i < this.state.systemCombinations_value.length; i++) {
@@ -489,17 +489,17 @@ class Product extends Component {
             let annuityCost = economicValues['annuityCost'];
             let monthlyHeadingCost = economicValues['monthlyHeadingCost'];
             let monthlyEnergyCost = economicValues['monthlyEnergyCost'];
-            graph_6_2.push([systemCombinationPosition, annuityCost, monthlyEnergyCost, monthlyHeadingCost]);
+            graph_6_2.push([systemCombinationPosition, annuityCost, monthlyEnergyCost,'', monthlyHeadingCost,'']);
         }
 
 
-        graph_7_1.push(['', 'CO2-Äquivalent in t/a', 'CO2-Vermeidungskosten']);
+        graph_7_1.push(['', 'CO2-Äquivalent in t/a','', 'CO2-Vermeidungskosten','']);
         for (i = 0; i < this.state.systemCombinations_value.length; i++) {
             let systemCombinationPosition = String(this.state.systemCombinations_value[0].systemCombinationPosition);
             let ecologicValues = this.state.systemCombinations_value[0].ecologicValues;
             let yearlyCO2Equivalent = ecologicValues['yearlyCO2Equivalent'];
             let yearlyAbatementCosts = ecologicValues['yearlyAbatementCosts'];
-            graph_7_1.push([systemCombinationPosition, yearlyCO2Equivalent, yearlyAbatementCosts]);
+            graph_7_1.push([systemCombinationPosition, yearlyCO2Equivalent,'', yearlyAbatementCosts,'']);
             break;
         }
         for (i = 1; i < this.state.systemCombinations_value.length; i++) {
@@ -507,7 +507,7 @@ class Product extends Component {
             let ecologicValues = this.state.systemCombinations_value[i].ecologicValues;
             let yearlyCO2Equivalent = ecologicValues['yearlyCO2Equivalent'];
             let yearlyAbatementCosts = ecologicValues['yearlyAbatementCosts'];
-            graph_7_2.push([systemCombinationPosition, yearlyCO2Equivalent, yearlyAbatementCosts]);
+            graph_7_2.push([systemCombinationPosition, yearlyCO2Equivalent,'', yearlyAbatementCosts,'']);
         }
 
         graph_1.sort(function (a, b) {
@@ -554,332 +554,97 @@ class Product extends Component {
         graph_7 = graph_7_1.concat(graph_7_2);
 
 
-        // for (let i = 1; i < graph_3.length; i++) {
-        //    if (i==2) { 
-        //         graph_3[i].push('color:#e81515');
-        //     } else {
-        //         graph_3[i].push('color:#4170aa');
-        //     }
-        // }
-
-        // for (let i = 1; i < graph_4.length; i++) {
-        //     if (i==2) { 
-        //          graph_4[i].push('color:[#e81515,#000000]');
-        //      } else {
-        //          graph_4[i].push('color:[#4170aa,#000000]');
-        //      }
-        //  }
-
-        //  for (let i = 1; i < graph_5.length; i++) {
-        //     if (i==1) { 
-        //          graph_5[i].push('color:#e81515','color:#000000');
-        //      } else {
-        //          graph_5[i].push('color:#4170aa','color:#000000');
-        //      }
-        //  }
-
-
+        let graph_1_values = [];
+        for (let i = 0; i < graph_1.length; i++) {
+            if (i==0) { 
+                graph_1_values.push([graph_1[i][0],graph_1[i][1],{role: 'style'}]);
+            }
+           else if (i==1) { 
+                graph_1_values.push([graph_1[i][0],graph_1[i][1],'color:#e81515']);
+            } else {
+                graph_1_values.push([graph_1[i][0],graph_1[i][1],'color:#cba550']);
+            }
+        }
         
-        // let graph1_values_1 = [];
-        // let graph1_values_2 = [];
-        // let graph_1_values = [];
-        // let graph1_text = "";
-        // for (i = 0; i < graph_1.length; i++) {
-        //     graph1_values_1 = graph_1[i][0];
-        //     if (graph1_values_1 === "9") {
-        //         graph1_text = "FC + PLB + TS";
-        //     }
-        //     if (graph1_values_1 === "8") {
-        //         graph1_text = "CHP + PLB + TS";
-        //     }
-        //     if (graph1_values_1 === "7") {
-        //         graph1_text = "PV + ST + BS + CGB + TS ";
-        //     }
-        //     if (graph1_values_1 === "6") {
-        //         graph1_text = "PV + ST + CGB + TS";
-        //     }
-        //     if (graph1_values_1 === "5") {
-        //         graph1_text = "PV + HR + CGB + TS";
-        //     }
-        //     if (graph1_values_1 === "4") {
-        //         graph1_text = "PV + HP + TS";
-        //     }
-        //     if (graph1_values_1 === "3") {
-        //         graph1_text = "PV + BS + PB + TS";
-        //     }
-        //     if (graph1_values_1 === "2") {
-        //         graph1_text = "PV + PB + TS";
-        //     }
-        //     if (graph1_values_1 === "1") {
-        //         graph1_text = "Reference";
-        //     }
-        //     graph1_values_2 = graph_1[i][1];
-        //     graph_1_values.push([graph1_text, graph1_values_2]);
-        // }
+        let graph_3_values = [];
+        for (let i = 0; i < graph_3.length; i++) {
+            if (i==0) { 
+                graph_3_values.push([graph_3[i][0],graph_3[i][1],{role: 'style'}]);
+            }
+           else if (i==2) { 
+                graph_3_values.push([graph_3[i][0],graph_3[i][1],'color:#e81515']);
+            } else {
+                graph_3_values.push([graph_3[i][0],graph_3[i][1],'color:#4170aa']);
+            }
+        }
+
+        let graph_4_values = [];
+        for (let i = 0; i < graph_4.length; i++) {
+            if (i==0) { 
+                graph_4_values.push([graph_4[i][0],graph_4[i][1],{role: 'style'},graph_4[i][3],{role: 'style'}]);
+            }
+            else if (i==1) { 
+                graph_4_values.push([graph_4[i][0],graph_4[i][1],'color:#e81515',graph_4[i][2],'color:#000000']);
+             } 
+            else {
+                graph_4_values.push([graph_4[i][0],graph_4[i][1],'color:#4170aa',graph_4[i][2],'color:#000000']);
+             }
+         }
+
+         let graph_5_values = [];
+         for (let i = 0; i < graph_5.length; i++) {
+             if (i==0) { 
+                 graph_5_values.push([graph_5[i][0],graph_5[i][1],{role: 'style'},graph_5[i][3],{role: 'style'}]);
+             }
+             else if (i==1) { 
+                 graph_5_values.push([graph_5[i][0],graph_5[i][1],'color:#fb5757',graph_5[i][3],'color:#e81515']);
+              } 
+             else {
+                 graph_5_values.push([graph_5[i][0],graph_5[i][1],'color:#4170aa',graph_5[i][3],'color:#113969']);
+              }
+          }
+
+        let graph_6_values = [];
+         for (let i = 0; i < graph_6.length; i++) {
+             if (i==0) { 
+                 graph_6_values.push([graph_6[i][0],graph_6[i][1],{role: 'style'},graph_6[i][3],{role: 'style'}]);
+             }
+             else if (i==2) { 
+                 graph_6_values.push([graph_6[i][0],graph_6[i][1],'color:#fb5757',graph_6[i][3],'color:#e81515']);
+              } 
+             else {
+                 graph_6_values.push([graph_6[i][0],graph_6[i][1],'color:#4170aa',graph_6[i][3],'color:#113969']);
+              }
+          }
 
 
-        // let graph2_values_1 = [];
-        // let graph2_values_2 = [];
-        // let graph2_values_3 = [];
-        // let graph2_values_4 = [];
-        // let graph2_values_5 = [];
-        // let graph2_values_6 = [];
-        // let graph_2_values = [];
-        // let graph2_text = "";
-        // for (i = 0; i < graph_2.length; i++) {
-        //     graph2_values_1 = graph_2[i][0];
-        //     if (graph2_values_1 === "9") {
-        //         graph2_text = "FC + PLB + TS";
-        //     }
-        //     if (graph2_values_1 === "8") {
-        //         graph2_text = "CHP + PLB + TS";
-        //     }
-        //     if (graph2_values_1 === "7") {
-        //         graph2_text = "PV + ST + BS + CGB + TS ";
-        //     }
-        //     if (graph2_values_1 === "6") {
-        //         graph2_text = "PV + ST + CGB + TS";
-        //     }
-        //     if (graph2_values_1 === "5") {
-        //         graph2_text = "PV + HR + CGB + TS";
-        //     }
-        //     if (graph2_values_1 === "4") {
-        //         graph2_text = "PV + HP + TS";
-        //     }
-        //     if (graph2_values_1 === "3") {
-        //         graph2_text = "PV + BS + PB + TS";
-        //     }
-        //     if (graph2_values_1 === "2") {
-        //         graph2_text = "PV + PB + TS";
-        //     }
-        //     if (graph2_values_1 === "1") {
-        //         graph2_text = "Reference";
-        //     }
-        //     graph2_values_2 = graph_2[i][1];
-        //     graph2_values_3 = graph_2[i][2];
-        //     graph2_values_4 = graph_2[i][3];
-        //     graph2_values_5 = graph_2[i][4];
-        //     graph2_values_6 = graph_2[i][5];
-        //     graph_2_values.push([graph2_text, graph2_values_2, graph2_values_3, graph2_values_4, graph2_values_5, graph2_values_6]);
-        // }
+          let graph_7_values = [];
+         for (let i = 0; i < graph_7.length; i++) {
+             if (i==0) { 
+                 graph_7_values.push([graph_7[i][0],graph_7[i][1],{role: 'style'},graph_7[i][3],{role: 'style'}]);
+             }
+             else if (i==2) { 
+                 graph_7_values.push([graph_7[i][0],graph_7[i][1],'color:#e81515',graph_7[i][3],'color:#e88e00']);
+              } 
+             else {
+                 graph_7_values.push([graph_7[i][0],graph_7[i][1],'color:#2fa057',graph_7[i][3],'color:#e88e00']);
+              }
+          }
 
 
-        // let graph3_values_1 = [];
-        // let graph3_values_2 = [];
-        // let graph_3_values = [];
-        // let graph3_text = "";
-        // for (i = 0; i < graph_3.length; i++) {
-        //     graph3_values_1 = graph_3[i][0];
-        //     if (graph3_values_1 === "9") {
-        //         graph3_text = "FC + PLB + TS";
-        //     }
-        //     if (graph3_values_1 === "8") {
-        //         graph3_text = "CHP + PLB + TS";
-        //     }
-        //     if (graph3_values_1 === "7") {
-        //         graph3_text = "PV + ST + BS + CGB + TS ";
-        //     }
-        //     if (graph3_values_1 === "6") {
-        //         graph3_text = "PV + ST + CGB + TS";
-        //     }
-        //     if (graph3_values_1 === "5") {
-        //         graph3_text = "PV + HR + CGB + TS";
-        //     }
-        //     if (graph3_values_1 === "4") {
-        //         graph3_text = "PV + HP + TS";
-        //     }
-        //     if (graph3_values_1 === "3") {
-        //         graph3_text = "PV + BS + PB + TS";
-        //     }
-        //     if (graph3_values_1 === "2") {
-        //         graph3_text = "PV + PB + TS";
-        //     }
-        //     if (graph3_values_1 === "1") {
-        //         graph3_text = "Reference";
-        //     }
-        //     graph3_values_2 = graph_3[i][1];
-        //     graph_3_values.push([graph3_text, graph3_values_2]);
-        // }
-
-
-        // let graph4_values_1 = [];
-        // let graph4_values_2 = [];
-        // let graph4_values_3 = [];
-        // let graph_4_values = [];
-        // let graph4_text = "";
-        // for (i = 0; i < graph_4.length; i++) {
-        //     graph4_values_1 = graph_4[i][0];
-        //     if (graph4_values_1 === "9") {
-        //         graph4_text = "FC + PLB + TS";
-        //     }
-        //     if (graph4_values_1 === "8") {
-        //         graph4_text = "CHP + PLB + TS";
-        //     }
-        //     if (graph4_values_1 === "7") {
-        //         graph4_text = "PV + ST + BS + CGB + TS ";
-        //     }
-        //     if (graph4_values_1 === "6") {
-        //         graph4_text = "PV + ST + CGB + TS";
-        //     }
-        //     if (graph4_values_1 === "5") {
-        //         graph4_text = "PV + HR + CGB + TS";
-        //     }
-        //     if (graph4_values_1 === "4") {
-        //         graph4_text = "PV + HP + TS";
-        //     }
-        //     if (graph4_values_1 === "3") {
-        //         graph4_text = "PV + BS + PB + TS";
-        //     }
-        //     if (graph4_values_1 === "2") {
-        //         graph4_text = "PV + PB + TS";
-        //     }
-        //     if (graph4_values_1 === "1") {
-        //         graph4_text = "Reference";
-        //     }
-        //     graph4_values_2 = graph_4[i][1];
-        //     graph4_values_3 = graph_4[i][2];
-        //     graph_4_values.push([graph4_text, graph4_values_2, graph4_values_3]);
-        // }
-
-
-        // let graph5_values_1 = [];
-        // let graph5_values_2 = [];
-        // let graph5_values_3 = [];
-        // let graph_5_values = [];
-        // let graph5_text = "";
-        // for (i = 0; i < graph_5.length; i++) {
-        //     graph5_values_1 = graph_5[i][0];
-        //     if (graph5_values_1 === "9") {
-        //         graph5_text = "FC + PLB + TS";
-        //     }
-        //     if (graph5_values_1 === "8") {
-        //         graph5_text = "CHP + PLB + TS";
-        //     }
-        //     if (graph5_values_1 === "7") {
-        //         graph5_text = "PV + ST + BS + CGB + TS ";
-        //     }
-        //     if (graph5_values_1 === "6") {
-        //         graph5_text = "PV + ST + CGB + TS";
-        //     }
-        //     if (graph5_values_1 === "5") {
-        //         graph5_text = "PV + HR + CGB + TS";
-        //     }
-        //     if (graph5_values_1 === "4") {
-        //         graph5_text = "PV + HP + TS";
-        //     }
-        //     if (graph5_values_1 === "3") {
-        //         graph5_text = "PV + BS + PB + TS";
-        //     }
-        //     if (graph5_values_1 === "2") {
-        //         graph5_text = "PV + PB + TS";
-        //     }
-        //     if (graph5_values_1 === "1") {
-        //         graph5_text = "Reference";
-        //     }
-        //     graph5_values_2 = graph_5[i][1];
-        //     graph5_values_3 = graph_5[i][2];
-        //     graph_5_values.push([graph5_text, graph5_values_2, graph5_values_3]);
-        // }
-
-        // let graph6_values_1 = [];
-        // let graph6_values_2 = [];
-        // let graph6_values_3 = [];
-        // let graph_6_values = [];
-        // let graph6_text = "";
-        // for (i = 0; i < graph_6.length; i++) {
-        //     graph6_values_1 = graph_6[i][0];
-        //     if (graph6_values_1 === "9") {
-        //         graph6_text = "FC + PLB + TS";
-        //     }
-        //     if (graph6_values_1 === "8") {
-        //         graph6_text = "CHP + PLB + TS";
-        //     }
-        //     if (graph6_values_1 === "7") {
-        //         graph6_text = "PV + ST + BS + CGB + TS ";
-        //     }
-        //     if (graph6_values_1 === "6") {
-        //         graph6_text = "PV + ST + CGB + TS";
-        //     }
-        //     if (graph6_values_1 === "5") {
-        //         graph6_text = "PV + HR + CGB + TS";
-        //     }
-        //     if (graph6_values_1 === "4") {
-        //         graph6_text = "PV + HP + TS";
-        //     }
-        //     if (graph6_values_1 === "3") {
-        //         graph6_text = "PV + BS + PB + TS";
-        //     }
-        //     if (graph6_values_1 === "2") {
-        //         graph6_text = "PV + PB + TS";
-        //     }
-        //     if (graph6_values_1 === "1") {
-        //         graph6_text = "Reference";
-        //     }
-        //     graph6_values_2 = graph_6[i][1];
-        //     graph6_values_3 = graph_6[i][2];
-        //     graph_6_values.push([graph6_text, graph6_values_2, graph6_values_3]);
-        // }
-
-        // let graph7_values_1 = [];
-        // let graph7_values_2 = [];
-        // let graph7_values_3 = [];
-        // let graph_7_values = [];
-        // let graph7_text = "";
-        // for (i = 0; i < graph_7.length; i++) {
-        //     graph7_values_1 = graph_7[i][0];
-        //     if (graph7_values_1 === "9") {
-        //         graph7_text = "FC + PLB + TS";
-        //     }
-        //     if (graph7_values_1 === "8") {
-        //         graph7_text = "CHP + PLB + TS";
-        //     }
-        //     if (graph7_values_1 === "7") {
-        //         graph7_text = "PV + ST + BS + CGB + TS ";
-        //     }
-        //     if (graph7_values_1 === "6") {
-        //         graph7_text = "PV + ST + CGB + TS";
-        //     }
-        //     if (graph7_values_1 === "5") {
-        //         graph7_text = "PV + HR + CGB + TS";
-        //     }
-        //     if (graph7_values_1 === "4") {
-        //         graph7_text = "PV + HP + TS";
-        //     }
-        //     if (graph7_values_1 === "3") {
-        //         graph7_text = "PV + BS + PB + TS";
-        //     }
-        //     if (graph7_values_1 === "2") {
-        //         graph7_text = "PV + PB + TS";
-        //     }
-        //     if (graph7_values_1 === "1") {
-        //         graph7_text = "Reference";
-        //     }
-        //     graph7_values_2 = graph_7[i][1];
-        //     graph7_values_3 = graph_7[i][2];
-        //     graph_7_values.push([graph7_text, graph7_values_2, graph7_values_3]);
-        // }
-
-
-        localStorage.setItem("google_graph1", JSON.stringify(graph_1));
+        localStorage.setItem("google_graph1", JSON.stringify(graph_1_values));
         localStorage.setItem("google_graph2", JSON.stringify(graph_2));
-        localStorage.setItem("google_graph3", JSON.stringify(graph_3));
-        localStorage.setItem("google_graph4", JSON.stringify(graph_4));
-        localStorage.setItem("google_graph5", JSON.stringify(graph_5));
-        localStorage.setItem("google_graph6", JSON.stringify(graph_6));
-        localStorage.setItem("google_graph7", JSON.stringify(graph_7));
+        localStorage.setItem("google_graph3", JSON.stringify(graph_3_values));
+        localStorage.setItem("google_graph4", JSON.stringify(graph_4_values));
+        localStorage.setItem("google_graph5", JSON.stringify(graph_5_values));
+        localStorage.setItem("google_graph6", JSON.stringify(graph_6_values));
+        localStorage.setItem("google_graph7", JSON.stringify(graph_7_values));
 
-        // localStorage.setItem("google_graph1", JSON.stringify(graph_1_values));
-        // localStorage.setItem("google_graph2", JSON.stringify(graph_2_values));
-        // localStorage.setItem("google_graph3", JSON.stringify(graph_3_values));
-        // localStorage.setItem("google_graph4", JSON.stringify(graph_4_values));
-        // localStorage.setItem("google_graph5", JSON.stringify(graph_5_values));
-        // localStorage.setItem("google_graph6", JSON.stringify(graph_6_values));
-        // localStorage.setItem("google_graph7", JSON.stringify(graph_7_values));
+       
 
         const chk_response_status = localStorage.getItem("response_status")
 
-        // if (chk_response_status === "200"){
-            if(this.state.status=="200"){
+    if(this.state.status=="200"){
             console.log(this.state.status)
             return (
                 <div className="container-fluid wrapper">
@@ -1022,7 +787,7 @@ Als Ergebnis empfehlen wir Ihnen 3 verschiedene Produktkombinationen.</p>
                         </div>
                         <div className="row graph_btn">
                         <div className="col-lg-12"> 
-                                <center><a href="/Economicgraph" className="btn btn_next"><i class="fa fa-bar-chart" aria-hidden="true"></i> &nbsp;
+                                <center><a href="/Economicgraph" className="btn btn_next" target="_blank"><i class="fa fa-bar-chart" aria-hidden="true"></i> &nbsp;
 Zur Vergleichsübersicht
                                 </a></center>
                         </div>
@@ -1031,8 +796,7 @@ Zur Vergleichsübersicht
                                 <center><button onClick={this.back} className="btn btn_next">
                                 <i class="fa fa-angle-left fa-1x" aria-hidden="true"></i>  &nbsp;  Zurück zum Formular</button></center>
                         </div>
-                       
-                             {/* <center>    </center> */}
+
                         </div>
                     </div>
                     <Footer />
