@@ -1,0 +1,1 @@
+This repository contains various documents and issues related to the general organization
