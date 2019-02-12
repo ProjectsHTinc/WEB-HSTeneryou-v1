@@ -20,7 +20,7 @@ class Graph_6 extends Component {
                                 data={graph6_values}
                                 // Set chart options
                                 options={{
-                                    title: 'Vergleich der monatlichen Elektrizitäts - und Heizkosten',
+                                    title: 'Vergleich der Stromkosten und Heizkosten',
                                     titleTextStyle: { color: '#000000', fontSize: 16 },
                                     fontName: "Roboto",
                                     legendTextStyle: { color: '#000000', fontSize: 10 },
@@ -32,7 +32,7 @@ class Graph_6 extends Component {
                                         }
                                     },
                                     hAxis: {
-                                        title: 'Anlagenkombinationen', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
+                                        title: 'Produktkombination', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
                                             fontSize: 13,
                                             italic: false
                                         }

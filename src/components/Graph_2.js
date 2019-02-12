@@ -34,7 +34,7 @@ class Graph_2 extends Component {
                                         easing: 'out',
                                     },
                                     hAxis: {
-                                        title: 'Anlagenkombinationen', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
+                                        title: 'Produktkombination', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
                                             fontSize: 13,
                                             italic: false
                                         }

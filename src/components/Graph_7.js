@@ -26,7 +26,7 @@ class Graph_7 extends Component {
                                     legendTextStyle: { color: '#000000', fontSize: 10 },
                                     chartArea: { width: '60%' },
                                     hAxis: {
-                                        title: 'Anlagenkombinationen', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
+                                        title: 'Produktkombination', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
                                             fontSize: 13,
                                             italic: false
                                         }

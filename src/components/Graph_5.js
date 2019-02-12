@@ -20,26 +20,26 @@ class Graph_5 extends Component {
                                 data={graph5_values}
                                 // Set chart options
                                 options={{
-                                    title: 'Vergleich der Energie- und Instandhaltungskosten',
+                                    title: 'Vergleich der Wartungskosten und Brennstoffkosten',
                                     titleTextStyle: { color: '#000000', fontSize: 16 },
                                     fontName: "Roboto",
                                     legendTextStyle: { color: '#000000', fontSize: 10 },
                                     chartArea: { width: '60%' },
                                     vAxis: {
-                                        title: 'Betriebskosten und Brennstoffkosten in €/a', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
+                                        title: 'Wartungskosten und Brennstoffkosten in €/a', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
                                             fontSize: 13,
                                             italic: false
                                         }
                                     },
                                     hAxis: {
-                                        title: 'Anlagenkombinationen', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
+                                        title: 'Produktkombination', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
                                             fontSize: 13,
                                             italic: false
                                         }
                                     },
                                     isStacked: true,
                                     seriesType: 'bars',
-                                    colors: ['#113969', '#4170aa'],
+                                    colors: ['#4170aa', '#113969'],
                                     animation: {
                                         startup: true,
                                         duration: 1500,

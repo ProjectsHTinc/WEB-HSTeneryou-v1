@@ -450,7 +450,7 @@ class Product extends Component {
         }
 
 
-        graph_4.push(['', 'annuityCost', 'Investitionskosten', '','Budgetobergrenze (€)','']);
+        graph_4.push(['', 'annuityCost', 'Anschaffungskosten', '','Budgetobergrenze (€)','']);
         //graph_4.push(['', 'annuityCost', 'Investitionskosten', 'Budgetobergrenze (€)']);
         for (i = 1; i < this.state.systemCombinations_value.length; i++) {
             let budget_value_amount = Number(localStorage.getItem('budget_value'));
@@ -462,7 +462,7 @@ class Product extends Component {
         }
 
 
-        graph_5.push(['', 'annuityCost', 'Betriebskosten','', 'Brennstoffkosten','']);
+        graph_5.push(['', 'annuityCost', 'Wartungskosten','', 'Brennstoffkosten','']);
         //graph_5.push(['', 'annuityCost', 'Betriebskosten', 'Brennstoffkosten']);
         for (i = 1; i < this.state.systemCombinations_value.length; i++) {
             let systemCombinationPosition = String(this.state.systemCombinations_value[i].systemCombinationPosition);
@@ -493,7 +493,7 @@ class Product extends Component {
         }
 
 
-        graph_7_1.push(['', 'CO2-Äquivalent in t/a','', 'CO2-Vermeidungskosten','']);
+        graph_7_1.push(['', 'CO2-Emission in t/a','', 'CO2-Vermeidungskosten','']);
         for (i = 0; i < this.state.systemCombinations_value.length; i++) {
             let systemCombinationPosition = String(this.state.systemCombinations_value[0].systemCombinationPosition);
             let ecologicValues = this.state.systemCombinations_value[0].ecologicValues;

@@ -20,19 +20,19 @@ class Graph_4 extends Component {
                                 data={graph4_values}
                                 // Set chart options
                                 options={{
-                                    title: 'Vergleich der Investitionskosten (inkl. Monatage)',
+                                    title: 'Vergleich der einmaligen Anschaffungskosten',
                                     titleTextStyle: { color: '#000000', fontSize: 16 },
                                     fontName: "Roboto",
                                     legendTextStyle: { color: '#000000', fontSize: 10 },
                                     chartArea: { width: '60%' },
                                     vAxis: {
-                                        title: 'Investitionskosten in €', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
+                                        title: 'Anschaffungskosten in €', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
                                             fontSize: 13,
                                             italic: false
                                         }
                                     },
                                     hAxis: {
-                                        title: 'Anlagenkombinationen', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
+                                        title: 'Produktkombination', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
                                             fontSize: 13,
                                             italic: false
                                         }

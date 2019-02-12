@@ -26,13 +26,13 @@ class Graph_3 extends Component {
                                     chartArea: { width: '60%' },
                                     vAxis: {
                                         format: '\u20AC#.##',
-                                        title: 'Annuitätische Kosten in €/a', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
+                                        title: 'Annuitätskosten in €/a', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
                                             fontSize: 13,
                                             italic: false
                                         }
                                     },
                                     hAxis: {
-                                        title: 'Anlagenkombinationen', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
+                                        title: 'Produktkombination', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
                                             fontSize: 13,
                                             italic: false
                                         }

@@ -41,7 +41,7 @@ class Emission extends Component {
                  </Tabs>
                     </div>
                     <div className="red_box">
-                    <center><span className="rec_box"></span><span className="red_text">Unsere Empfehlung für Sie</span></center>
+                    <center><span className="rec_box"></span><span className="red_text">Unsere Empfehlung für Umweltbewusste</span></center>
                     </div>
                     
                 </div>
@@ -49,7 +49,7 @@ class Emission extends Component {
 
                 <div className="row graph_table">
                 <div class="table-responsive">
-                    <table class="table table-borderless" responsive>
+                <table class="table table-borderless" responsive>
                         <thead>
                             <tr>
                                 <th>Produktkombination</th>
@@ -70,7 +70,8 @@ class Emission extends Component {
                                 <td>Strom aus dem Netz<br></br>
                                     Gaskessel<br></br>
                                     Wärmespeicher<br></br>
-                                    (Referenzsystem)</td>
+                                    (Referenzsystem)
+                                </td>
                                 <td>Photovoltaik<br></br>
                                     Pelletkessel<br></br>
                                     Wärmespeicher
@@ -78,14 +79,16 @@ class Emission extends Component {
                                 <td>Photovoltaik<br></br>
                                     Pelletkessel<br></br>
                                     Wärmespeicher<br></br>
-                                    Batteriespeicher
+                                    Batteriespeicher<br></br>
+                                    
                                 </td>
                                 <td>Photovoltaik<br></br>
                                     Wärmepumpe<br></br>
-                                    Wärmespeicher
+                                    Wärmespeicher<br></br>
+                                    Heizschwert
                                 </td>
                                 <td>Photovoltaik<br></br>
-                                    Heizstab<br></br>
+                                    Heizschwert<br></br>
                                     Wärmespeicher<br></br>
                                     Gasbrennwertkessel
                                 </td>

@@ -45,11 +45,14 @@ class Energetic extends Component {
                         </TabPanel>
                     </Tabs>
                     </div>
+
                     <div className="red_box">
-                    <center><span className="rec_box"></span><span className="red_text">Unsere Empfehlung für Sie</span></center>
+                        <center><span className="rec_box"></span><span className="red_text">Unsere Empfehlung für Selbstversorger</span></center>
                     </div>
+
                    </div>
                    </div>
+                    
                     <div className="container graph_table">
                     <div class="table-responsive">
                     <table class="table table-borderless" responsive>
@@ -67,13 +70,14 @@ class Energetic extends Component {
                                 <th>9</th>
                             </tr>
                         </thead>
-                        <tbody className="graph_table_text">
+                        <tbody>
                             <tr>
                                 <td>Komponenten</td>
                                 <td>Strom aus dem Netz<br></br>
                                     Gaskessel<br></br>
                                     Wärmespeicher<br></br>
-                                    (Referenzsystem)</td>
+                                    (Referenzsystem)
+                                </td>
                                 <td>Photovoltaik<br></br>
                                     Pelletkessel<br></br>
                                     Wärmespeicher
@@ -81,14 +85,16 @@ class Energetic extends Component {
                                 <td>Photovoltaik<br></br>
                                     Pelletkessel<br></br>
                                     Wärmespeicher<br></br>
-                                    Batteriespeicher
+                                    Batteriespeicher<br></br>
+                                    
                                 </td>
                                 <td>Photovoltaik<br></br>
                                     Wärmepumpe<br></br>
-                                    Wärmespeicher
+                                    Wärmespeicher<br></br>
+                                    Heizschwert
                                 </td>
                                 <td>Photovoltaik<br></br>
-                                    Heizstab<br></br>
+                                    Heizschwert<br></br>
                                     Wärmespeicher<br></br>
                                     Gasbrennwertkessel
                                 </td>
@@ -115,13 +121,7 @@ class Energetic extends Component {
                         </tbody>
                     </table>
                 </div>            
-               
-
-
                 </div>
-               
-               
-              
                 </div>
             <Footer/>
         </div>

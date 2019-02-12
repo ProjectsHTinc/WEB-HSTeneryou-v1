@@ -38,7 +38,7 @@ class Economicgraph extends Component {
                     <Tabs selectedIndex={this.state.tabIndex} onSelect={tabIndex => this.setState({ tabIndex })}>
                     <TabList>
                         <Tab>Annuitätskosten</Tab>
-                        <Tab>Investitionskosten</Tab>
+                        <Tab>Anschaffungskosten</Tab>
                         <Tab>Betriebskosten</Tab>
                         <Tab>Monatliche Kosten</Tab>
                     </TabList>
@@ -57,7 +57,7 @@ class Economicgraph extends Component {
                 </Tabs>
                     </div>
                     <div className="red_box">
-                    <center><span className="rec_box"></span><span className="red_text">Unsere Empfehlung für Sie</span></center>
+                    <center><span className="rec_box"></span><span className="red_text">Unsere Empfehlung für Preisorientierte</span></center>
                     </div>
                     
                 </div>
@@ -85,7 +85,8 @@ class Economicgraph extends Component {
                                 <td>Strom aus dem Netz<br></br>
                                     Gaskessel<br></br>
                                     Wärmespeicher<br></br>
-                                    (Referenzsystem)</td>
+                                    (Referenzsystem)
+                                </td>
                                 <td>Photovoltaik<br></br>
                                     Pelletkessel<br></br>
                                     Wärmespeicher
@@ -93,14 +94,16 @@ class Economicgraph extends Component {
                                 <td>Photovoltaik<br></br>
                                     Pelletkessel<br></br>
                                     Wärmespeicher<br></br>
-                                    Batteriespeicher
+                                    Batteriespeicher<br></br>
+                                    
                                 </td>
                                 <td>Photovoltaik<br></br>
                                     Wärmepumpe<br></br>
-                                    Wärmespeicher
+                                    Wärmespeicher<br></br>
+                                    Heizschwert
                                 </td>
                                 <td>Photovoltaik<br></br>
-                                    Heizstab<br></br>
+                                    Heizschwert<br></br>
                                     Wärmespeicher<br></br>
                                     Gasbrennwertkessel
                                 </td>
