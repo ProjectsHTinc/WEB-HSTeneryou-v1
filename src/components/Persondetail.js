@@ -132,8 +132,8 @@ class Persondetail extends Component {
         <Header/>
         <div className="container">
                     <div className="row justify-content-center">
-                        <div className="col-9">
-                        <Stepper activeStep={ 1 }  titleFontSize={'14px'} completeColor={'#2171b9' } activeColor={'#2171b9'} completeBarColor={'#5096ff'} steps={ [{title: 'Meine Gebäudedaten '}, {title: 'Mein Strombedarf'}, {title: 'Mein Wärmebedarf'}, {title: 'Meine Präferenz'}] } />
+                        <div className="col-lg-9 col-sm-12">
+                        <Stepper activeStep={ 1 } circleFontSize={'2'} activeTitleColor={'#2171b9'} completeTitleColor={'#2171b9'} titleFontSize={'14px'} completeColor={'#2171b9' } activeColor={'#2171b9'} completeBarColor={'#5096ff'} steps={ [{title: 'Meine Gebäudedaten '}, {title: 'Mein Strombedarf'}, {title: 'Mein Wärmebedarf'}, {title: 'Meine Präferenz'}] } />
                         </div>
                         
                     </div>            
@@ -183,7 +183,7 @@ class Persondetail extends Component {
                                                     </span>
                                                           <span className="p_form_label">{person}</span>  
                                         </div>
-                                        <p style={{ marginTop: '20px' }} className="error_font">{this.state.star_errors}</p>
+                                        <p  className="error_font">{this.state.star_errors}</p>
 
                                      
                                       

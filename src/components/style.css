@@ -28,26 +28,35 @@ html {
     color: #2171b9;
 }
   body {
-    position: relative;
-    margin: 0;
-    /* padding-bottom: 1rem; */
+     position: relative;
+    margin: 0; 
+    padding-bottom: 10px;
     min-height: 100%;
+    /* min-height: calc(100vh - 48px); */
+
     font-family: 'Roboto', sans-serif;
   
   }
-
+  
   .wrapper{
     margin: 0px;
     padding: 0px;
 }
 .footer_section{
     background-color: #2171b9;
-    position: relative;
+    /* position: relative;
     bottom: 0;
     width: 100%;
     padding-top: 5px;
     padding-bottom: 5px;
-    margin-top: 30px;
+    margin-top: 30px; */
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    /* background-color: #efefef; */
+    text-align: center;
 
 }
 .label_question{
@@ -163,7 +172,7 @@ html {
     font-size: 14px;
 }
 .c_label{
-    color:#000;
+    color:#2171b9;
     font-size: 15px; 
     margin-bottom: 0px;
 }
@@ -184,8 +193,8 @@ html {
 .radio_box{
     border: 2px solid grey;   
     border-radius: 10px;
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
     
 }
 .radio_image{
@@ -197,7 +206,8 @@ html {
    
     color: #fff;
     font-weight: 600;
-    background-color: #1554a0;
+    background-color: #2171b9;
+  
  }
  .construction_year{
     margin-left: 25px;
@@ -227,7 +237,7 @@ input[type='radio']:before {
     border-radius:50%;    
 }
 input[type='radio']:checked:before {
-    background:blue;
+    background:#2171b9;
     
 }
 
@@ -266,7 +276,8 @@ input[type='radio']:checked:before {
     color: #fff;
     border: none;
     letter-spacing: 12px;
-    
+    text-align: center;
+    font-size: 14px;
 }
 .d_direction_div{
     text-align: center;
@@ -298,6 +309,8 @@ input[type='radio']:checked:before {
     color: #fff;
     border: none;
     letter-spacing: 12px;
+    text-align: center;
+    font-size: 14px;
     
 }
 .living_area_question{
@@ -349,7 +362,7 @@ input::placeholder {
 
 .progress_section{
     margin-top:10px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
 }
 .character_img{
     margin-top: 60px;
@@ -422,19 +435,20 @@ input::placeholder {
     font-size: 14px;
     text-align: center;
     margin: auto;
-    padding: 0px 30px 0px 30px;
+    padding: 0px 20px 0px 20px;
+    width: 100%;
 }
 .power_text_consumption{
-    margin-left: 2px;
-    margin-right: 2px;
+    margin-left: 10px;
+    margin-right: 0px;
     border-top: none;
     border-left: none;
     border-right: none;
     text-align: center;
     border-bottom: 1px solid;
     margin-bottom: 10px;
-    padding: 0px 30px 0px 30px;
-    
+    /* padding: 0px 20px 0px 20px; */
+    width: 100%;
 }
 .p_consuption{
     display: inline-flex;
@@ -464,8 +478,8 @@ input::placeholder {
 .p_icon{
     margin: auto;
     display: inline-flex;
-    padding: 0px 30px 0px 30px;
-   
+    /* padding: 0px 30px 0px 30px; */
+    width:100%;
 }
 .icon{
     margin-left: 10px;
@@ -498,12 +512,8 @@ input::placeholder {
     font-size: 14px;
     margin-bottom: 6px;
 }
-.power_meter_box{
-    padding: 5px;
-    margin-left: 12px;
-    width: 100%;
-    position: relative;
-    top: 50px;
+.power_text_consumption:focus{
+    border-left-color: #fff;
 }
 .electric_symbol_class{
     text-align: center;
@@ -582,8 +592,8 @@ input::placeholder {
     padding-top: 10px;
     margin-top: 5px;   
     box-shadow: 0px 2px 12px 6px #d9d9d9;
-    margin-left: 10px;
-    margin-right: 10px;
+    margin-left: 0px;
+    margin-right: 0px;
 
 }
 .enery_heading{
@@ -944,8 +954,13 @@ tr td{
      }
      .living_area_box{
          background-image: none !important;
+         height: 180px;
 
          
+     }
+     .p_consuption{
+        display: inline-block;
+        width: 100%;
      }
      .next_section{
         width: auto;
@@ -957,8 +972,10 @@ tr td{
    .hide_tab{
        display: none;
    }
-   .construction_year{
+   .construction_year{       
        text-align: center;
+       margin: auto;
+      padding-top:50px;
    }
    .radio_box{
        width: auto;
@@ -974,18 +991,20 @@ tr td{
    }
    .living_text_box{
        font-size: 14px;
-       width: 100%;
+       width: auto;
        margin: 0px;
        text-align: center;
    }
  .person_detail_box{
     background-image: none !important;
+    height: 300px !important;
+
  }
  .p_icon span{
      display: inline-flex !important;
  }
  .p_icon{
-    padding: 0px;
+    margin-top: 15px;
  }
  .icon{
      margin-left: 5px;
@@ -995,7 +1014,8 @@ tr td{
      margin-top: 10px;
  }
  .p_form_label{
-    padding: 2px;
+    display: inline-block;
+    float: right;
  }
  .person_label{
      padding: 5px;
@@ -1006,7 +1026,8 @@ tr td{
 }
 .power_text_consumption{
     padding: 0px;
-    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .kwh{
@@ -1016,6 +1037,8 @@ tr td{
    
     .form_1_bg_1{
         background-image: none !important;
+        border: 2px solid #2171b9;
+        border-radius: 10px;
     }
    
     .radio_box{
@@ -1056,8 +1079,15 @@ tr td{
     .form_4_bg{
         height: 429px;
     }
-    
-   
+    .kwh{
+        padding: 0px 26px 0px 26px;
+    }
+    .p_text_box{
+        margin-right:20px;
+    }
+    .d_direction_div{
+        margin-right:20px;
+    }
     .power_text_consumption{
         padding: 0px;
     }
@@ -1088,7 +1118,13 @@ tr td{
      }
      .living_area_question{
         margin-top: 220px;
+        text-align: center;
      }
+     .living_box_house{
+        margin: auto;
+        width: 50%;
+     }
+    
      .construction_year{
          text-align: center;
      }
@@ -1192,3 +1228,9 @@ tr td{
     }
 }
 
+.zoom {    
+    transition: transform .2s;        
+  }  
+  .zoom:hover {
+    transform: scale(1.3);
+  }

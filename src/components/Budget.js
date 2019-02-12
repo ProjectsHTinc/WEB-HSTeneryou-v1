@@ -101,13 +101,13 @@ class Budget extends Component {
         <div className="container">
                     <div className="row justify-content-center">
                         <div className="col-9">
-                        <Stepper activeStep={ 3 }  titleFontSize={'14px'} completeColor={'#2171b9' } activeColor={'#2171b9'} completeBarColor={'#5096ff'} steps={ [{title: 'Meine Gebäudedaten '}, {title: 'Mein Strombedarf'}, {title: 'Mein Wärmebedarf'}, {title: 'Meine Präferenz'}] } />
+                        <Stepper activeStep={ 3 } circleFontSize={'2'} activeTitleColor={'#2171b9'} completeTitleColor={'#2171b9'} titleFontSize={'14px'} completeColor={'#2171b9' } activeColor={'#2171b9'} completeBarColor={'#5096ff'} steps={ [{title: 'Meine Gebäudedaten '}, {title: 'Mein Strombedarf'}, {title: 'Mein Wärmebedarf'}, {title: 'Meine Präferenz'}] } />
                         </div>
                         
                     </div>            
                 </div>
         <div className="container">
-        <h4 className="form_heading">Meine persönliche Präferenz </h4>
+        <h4 className="form_heading">Meine  Präferenz </h4>
         <form>
 
                 {/* Form section starts here */}
@@ -124,16 +124,16 @@ class Budget extends Component {
                   <div className="">
                   <p className="label_question " style={{textAlign:'left'}}>Wie hoch ist Ihr Budgetlimit?</p>
                     <div className="row energy_form">
-                        <p className="budget_font">Budgetobergrenze (€)</p>
+                        <p className="budget_font">Budgetobergrenze </p>
                         <div className="budget_icon">
                             <img src={euro_icon}   alt="Ener You" responsive className="" id=""/>   
                         </div>
                         <div className="budget_box">
                         <input type="text"  className="form-control"
-                            name="budget_value" 
+                            name="budget_value"
                             ref={(budget_value) => this.budget_value = budget_value}
                             onChange={this.props.handleChange('budget_value')}
-                             className="budget_price" placeholder='Preis' defaultValue={values.budget_value} />
+                             className="budget_price" placeholder='in (€) eingeben' defaultValue={values.budget_value} />
                                <p  className="error_font">{this.state.errors["budget_value"]}</p>
                         </div>
                         <div className="form_btn">

@@ -21,7 +21,7 @@ class Footer extends Component {
                     <div className="col-md-4 text-right">
                     <div className="footer_links">
                             <a href=""><img src={footer_logo} responsive className="" id="" /></a>
-                            <a className="foot_year">2019</a>
+                            
                           
                         </div>
                     </div>

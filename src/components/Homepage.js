@@ -15,7 +15,7 @@ class Homepage extends Component {
   };
 
   componentDidMount() {
-   
+    localStorage.clear();
     setTimeout(() => this.setState({ loading: false }), 1000);
   }
 
@@ -40,7 +40,7 @@ class Homepage extends Component {
     };
     return (
      
-      <div className="container-fluid wrapper">
+      <div className="container-fluid wrapper" style={{position:'absolute'}}>
    
 {/*        
         <div className="container ">
@@ -86,6 +86,7 @@ class Homepage extends Component {
         </div>
        
         </div>
+      
       </div>
       
     );
