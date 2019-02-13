@@ -235,7 +235,7 @@ class Persondetail extends Component {
                 {/* Progress Bar section Starts here */}
                
                       
-                        <div className="row progress_section" style={{ marginTop: '30px' }}>
+                        <div className="row progress_section person_next_back" style={{ marginTop: '30px' }}>
                             <div className="col-md-2">
                                 <div className="char_next_btn_section">
                                     <div className="">

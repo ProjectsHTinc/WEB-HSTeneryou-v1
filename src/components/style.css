@@ -958,10 +958,7 @@ tr td{
 
          
      }
-     .p_consuption{
-        display: inline-block;
-        width: 100%;
-     }
+    
      .next_section{
         width: auto;
         margin-top: -40px;
@@ -1005,10 +1002,16 @@ tr td{
  }
  .p_icon{
     margin-top: 15px;
+    margin-bottom: 15px;
+    width:50%;
  }
  .icon{
      margin-left: 5px;
      margin-right: 5px;
+ }
+ .p_consuption{
+    display: grid;
+    width: 100%;
  }
  .p_box{
      margin-top: 10px;
@@ -1022,18 +1025,21 @@ tr td{
      margin: 0px;
  }
  .power_label{
-    padding: 7px;
+    width:100%;
 }
 .power_text_consumption{
     padding: 0px;
     margin-top: 10px;
     margin-bottom: 10px;
+    margin-left:0px;
 }
 
 .kwh{
     padding: 0px;
 }
-
+.person_next_back{
+    margin-top: 60px !important;
+}
    
     .form_1_bg_1{
         background-image: none !important;
@@ -1044,31 +1050,16 @@ tr td{
     .radio_box{
         margin-bottom: 10px;
     }
-    .char_img_2{
-        display:none;
-    }
-    .power_meter_box{
-        padding: 0px;
-        text-align: center;
-        margin: 0px;
-        left: -20px;
-    }
-    .p_icon{
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-    .character_3{
-        display: none;
-    }
+
+
+   
     .form_3_bg{
         height: auto !important;
     }
     .form_4_bg{
         height: auto !important;
     }
-    .character_4{
-        display: none;
-    }
+
     .footer_section{
         display: none;
     }

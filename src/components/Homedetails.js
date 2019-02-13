@@ -101,7 +101,7 @@ class Homedetails extends Component {
     continue = e => {
         //let fields = this.state.fields;
         e.preventDefault();
-       //this.props.nextStep();
+      
         if (this.handleValidation()) {
             this.props.nextStep();
         } else {
