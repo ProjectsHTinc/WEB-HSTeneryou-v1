@@ -33,72 +33,72 @@ class Product extends Component {
         let local_person_count = localStorage.getItem('person_count');
 
 
-        var data = {
-            "building": {
-                "postalCode": '23456',
-                "constructionYear": "FROM1969_TO1978",
-                "livingSpace": 150,
-                "roofAlignment": "SOUTH",
-                "roofTilt": "DEGREES_35"
-            },
-            "energyDemand": {
-                "personCount": 5,
-                "energyDemand": 5005,
-                "headingDemandType": "CONSTRUCTION_YEAR"
-            }
-        }
+        // var data = {
+        //     "building": {
+        //         "postalCode": '23456',
+        //         "constructionYear": "FROM1969_TO1978",
+        //         "livingSpace": 150,
+        //         "roofAlignment": "SOUTH",
+        //         "roofTilt": "DEGREES_35"
+        //     },
+        //     "energyDemand": {
+        //         "personCount": 5,
+        //         "energyDemand": 5005,
+        //         "headingDemandType": "CONSTRUCTION_YEAR"
+        //     }
+        // }
 
-        //   if (energy_demand === 'CONSTRUCTION_YEAR'){
+          if (energy_demand === 'CONSTRUCTION_YEAR'){
 
-        //     var data = {
-        //         "building": {
-        //             "postalCode": post_code,
-        //             "constructionYear": construction_year,
-        //             "livingSpace": living_area,
-        //             "roofAlignment": directionChange,
-        //             "roofTilt": roof_inclination
-        //         },
-        //         "energyDemand": {
-        //             "personCount": local_person_count,
-        //             "energyDemand": power_consumption,
-        //             "headingDemandType": energy_demand
-        //         }
-        //       }
-        //   } 
+            var data = {
+                "building": {
+                    "postalCode": post_code,
+                    "constructionYear": construction_year,
+                    "livingSpace": living_area,
+                    "roofAlignment": directionChange,
+                    "roofTilt": roof_inclination
+                },
+                "energyDemand": {
+                    "personCount": local_person_count,
+                    "energyDemand": power_consumption,
+                    "headingDemandType": energy_demand
+                }
+              }
+          } 
 
-        //   if (energy_demand === 'GAS_OR_OIL_BILL'){
-        //     var data = {
-        //         "building": {
-        //             "postalCode": post_code,
-        //             "constructionYear": construction_year,
-        //             "livingSpace": living_area,
-        //             "roofAlignment": directionChange,
-        //             "roofTilt": roof_inclination
-        //         },
-        //         "energyDemand": {
-        //             "personCount": local_person_count,
-        //             "energyDemand": power_consumption,
-        //             "headingDemandType": energy_demand,
-        //             "yearlyGasDemand": yearlyGasDemand
-        //         }
-        //       }
-        //   } 
+          if (energy_demand === 'GAS_OR_OIL_BILL'){
+            var data = {
+                "building": {
+                    "postalCode": post_code,
+                    "constructionYear": construction_year,
+                    "livingSpace": living_area,
+                    "roofAlignment": directionChange,
+                    "roofTilt": roof_inclination
+                },
+                "energyDemand": {
+                    "personCount": local_person_count,
+                    "energyDemand": power_consumption,
+                    "headingDemandType": energy_demand,
+                    "yearlyGasDemand": yearlyGasDemand
+                }
+              }
+          } 
 
-        //   if (energy_demand === 'ENERGY_CERTIFICATE'){ 
-        //     var data = {
-        //         "building": {
-        //             "postalCode": post_code,
-        //             "roofAlignment": directionChange,
-        //             "roofTilt": roof_inclination
-        //         },
-        //         "energyDemand": {
-        //             "energyDemand": power_consumption,
-        //             "headingDemandType": energy_demand,
-        //             "yearlyEnergyDemand": yearlyEnergyDemand,
-        //             "yearlyEnergyDemandOnWater": yearlyEnergyDemandOnWater
-        //         }
-        //       }
-        //   }
+          if (energy_demand === 'ENERGY_CERTIFICATE'){ 
+            var data = {
+                "building": {
+                    "postalCode": post_code,
+                    "roofAlignment": directionChange,
+                    "roofTilt": roof_inclination
+                },
+                "energyDemand": {
+                    "energyDemand": power_consumption,
+                    "headingDemandType": energy_demand,
+                    "yearlyEnergyDemand": yearlyEnergyDemand,
+                    "yearlyEnergyDemandOnWater": yearlyEnergyDemandOnWater
+                }
+              }
+          }
 
         fetch("http://52.15.238.228:8080/eneryou/api/recommentations", {
             method: 'POST',
@@ -960,7 +960,7 @@ Zur Vergleichsübersicht
                         <div className="row product_recommendation">
                             <div className="col-md-12 col-lg-12 col-sm-12">
                             <p className="text-center"> 
-                            <img src={img_loading} responsive className="" id="" style={{width:'300px'}} />   
+                            <img src={img_loading} responsive className="" id="" style={{width:'300px',marginTop:'50px'}} />   
                               
                                 </p>
                           
