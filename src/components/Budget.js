@@ -98,7 +98,7 @@ class Budget extends Component {
         return (
         <div className="container-fluid wrapper">
         <Header/>
-        <div className="container">
+        <div className="container step_progress">
                     <div className="row justify-content-center">
                         <div className="col-9">
                         <Stepper activeStep={ 3 } circleFontSize={'2'} activeTitleColor={'#2171b9'} completeTitleColor={'#2171b9'} titleFontSize={'14px'} completeColor={'#2171b9' } activeColor={'#2171b9'} completeBarColor={'#5096ff'} steps={ [{title: 'Meine Gebäudedaten '}, {title: 'Mein Strombedarf'}, {title: 'Mein Wärmebedarf'}, {title: 'Meine Präferenz'}] } />

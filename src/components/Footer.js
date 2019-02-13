@@ -20,8 +20,8 @@ class Footer extends Component {
                     </div>
                     <div className="col-md-4 text-right">
                     <div className="footer_links">
-                            <a href=""><img src={footer_logo} responsive className="" id="" /></a>
-                            
+                            {/* <a href=""><img src={footer_logo} responsive className="" id="" /></a> */}
+                            <p className="copy_right">&copy; 2019 ENER | YOU</p>
                           
                         </div>
                     </div>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Header from './Header';
 import Footer from './Footer';
+import $ from "jquery";
 import Stepper from 'react-stepper-horizontal';
 import StarRatingComponent from 'react-star-rating-component';
 import Rating  from 'react-rating';
@@ -118,7 +119,7 @@ class Persondetail extends Component {
            }
       }
     componentDidMount(){
-  
+        $("#power_consumption").attr('maxlength','4');
 
     }
 
@@ -130,7 +131,7 @@ class Persondetail extends Component {
     return (
         <div className="container-fluid wrapper">
         <Header/>
-        <div className="container">
+        <div className="container step_progress">
                     <div className="row justify-content-center">
                         <div className="col-lg-9 col-sm-12">
                         <Stepper activeStep={ 1 } circleFontSize={'2'} activeTitleColor={'#2171b9'} completeTitleColor={'#2171b9'} titleFontSize={'14px'} completeColor={'#2171b9' } activeColor={'#2171b9'} completeBarColor={'#5096ff'} steps={ [{title: 'Meine Gebäudedaten '}, {title: 'Mein Strombedarf'}, {title: 'Mein Wärmebedarf'}, {title: 'Meine Präferenz'}] } />
@@ -171,7 +172,7 @@ class Persondetail extends Component {
                                              {/* <div className="p_form_label" style={{ borderLeft: '3px solid #2171b9' }}>{person}</div> */}
                                                 </div>
                                       
-                                                <p className="label_question">Wie viel Personen wohnen im Haushalt und wie hoch ist Ihr Strombedarf?</p>
+                                                <p className="label_question person_question">Wie viel Personen wohnen im Haushalt und wie hoch ist Ihr Strombedarf?</p>
                                         <div className="p_consuption">
                                             <p className="person_label"> Personenanzahl</p>
                                             <span className="p_icon">

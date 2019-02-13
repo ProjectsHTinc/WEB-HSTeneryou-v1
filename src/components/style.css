@@ -24,8 +24,18 @@ html {
     margin-left: 10px;
     margin-right: 10px;
 }
+.copy_right{
+    font-size: 14px;
+    color: #fff;
+    margin: auto;
+}
+.form-control{
+    font-size: 14px;
+}
 .p_label{
     color: #2171b9;
+    font-size: 15px;
+    font-weight: 600;
 }
   body {
      position: relative;
@@ -54,10 +64,20 @@ html {
     right: 0;
     bottom: 0;
     left: 0;
-    padding: 1rem;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /* padding:8px; */
     /* background-color: #efefef; */
     text-align: center;
 
+}
+.bg-dark {
+    background-color: #fff !important;
+    margin-top: 0px;
+    border-bottom: 2px solid rgb(216, 216, 216);
+}
+.step_progress{
+    margin-top:80px;
 }
 .label_question{
     font-size: 14px;
@@ -65,6 +85,7 @@ html {
 }
 .product_heading_top{
     font-size: 15px;
+    margin-top:50px;
 }
 .label_heading{
     font-size: 15px;
@@ -104,9 +125,23 @@ html {
     margin-bottom: 5px;
     
 }
+.object {
+    animation: MoveUpDown 2s linear infinite;
+    position: relative;
+   
+  }
+  
+  @keyframes MoveUpDown {
+    0%, 100% {
+      bottom: 0;
+    }
+    50% {
+      bottom: 30px;
+    }
+  }
 .home_box{
    
-    margin-top: -150px;
+    margin-top: -170px;
     position: relative;    
     margin-bottom: 0px;
 }
@@ -147,10 +182,8 @@ html {
     font-weight: 300;
     font-size: 20px;
 }
-.img_compass{
-  
-    margin-top: 0px;
-
+.radio_house{
+    width:90px;
 }
 .radio_image:hover img{
     filter:progid:DXImageTransform.Microsoft.Alpha(opacity=100);
@@ -175,6 +208,7 @@ html {
     color:#2171b9;
     font-size: 15px; 
     margin-bottom: 0px;
+    font-weight: 600;
 }
 
 
@@ -210,7 +244,7 @@ html {
   
  }
  .construction_year{
-    margin-left: 25px;
+    margin-left: 26px;
     padding-top: 65px;
  }
 /* Radio Button */
@@ -269,6 +303,7 @@ input[type='radio']:checked:before {
     margin-bottom: 5px;
     margin-left: 0px;
     margin-right: 60px;
+    box-shadow: 0px 4px 6px 3px #dcdcdc;
 }
 .post_code_text_box{
     width: 140px;
@@ -287,6 +322,7 @@ input[type='radio']:checked:before {
     padding-bottom: 10px;
     margin-left: 0px;
     margin-right: 60px;
+    box-shadow: 0px 4px 6px 3px #dcdcdc;
 }
 .l_living_box{
     text-align: center;
@@ -294,6 +330,7 @@ input[type='radio']:checked:before {
 .l_living_label{
     color: #2171b9;
     font-size: 15px;
+    font-weight: 600;
 }
 .living_box_house{
     border: 2px solid #2171b9;
@@ -302,6 +339,7 @@ input[type='radio']:checked:before {
     padding-top: 5px;
     padding-bottom: 5px;
     background-color: #fff;
+    box-shadow: 0px 4px 6px 3px #dcdcdc;
 }                               
 .living_text_box{
     background-color: #2171b9;
@@ -414,7 +452,7 @@ input::placeholder {
     margin-top: 5px;
 }
 .power_label{
-    padding: 15px 47px 15px 47px;
+    padding: 15px 73px 15px 54px;
     margin-bottom: 0px;
     background-color: #2171b9;
     color: #fff;
@@ -423,7 +461,7 @@ input::placeholder {
     font-weight: 500;
 }
 .person_label{
-    padding: 15px 40px 15px 40px;
+    padding: 15px 54px 15px 53px;
     margin-bottom: 0px;
     background-color: #2171b9;
     color: #fff;
@@ -436,7 +474,7 @@ input::placeholder {
     text-align: center;
     margin: auto;
     padding: 0px 20px 0px 20px;
-    width: 100%;
+    
 }
 .power_text_consumption{
     margin-left: 10px;
@@ -447,14 +485,17 @@ input::placeholder {
     text-align: center;
     border-bottom: 1px solid;
     margin-bottom: 10px;
-    /* padding: 0px 20px 0px 20px; */
+    padding: 0px 0px 0px 10px;
+    font-size: 14px;
     width: 100%;
+    
 }
 .p_consuption{
     display: inline-flex;
     padding: 0px;
-    border: 1px solid;
+    /* border: 1px solid; */
     background-color: #fff;
+    width: 100%;
 }
 .p_box{
     /* margin: auto;
@@ -474,11 +515,14 @@ input::placeholder {
 .person_count{   
     background-color: #2171b9;
 }
-
+.person_question{
+    text-align: left;
+    margin-bottom: 3px;
+}
 .p_icon{
     margin: auto;
     display: inline-flex;
-    /* padding: 0px 30px 0px 30px; */
+    padding: 0px 0px 0px 14px;
     width:100%;
 }
 .icon{
@@ -598,8 +642,8 @@ input::placeholder {
 }
 .enery_heading{
     text-align: center;
-    font-size: 14px;
-    font-weight: 500;
+    font-size: 15px;
+    font-weight: 600;
     width: 100%;
    color: #2171b9;
 
@@ -661,8 +705,9 @@ input::placeholder {
     margin-left: 80px;
 }
 .budget_font{
-    font-size: 18px;
-    font-weight: 400;
+    font-size: 15px;
+    font-weight: 600;
+    color: #2171b9;
     text-align: center;
     width: 100%;
     margin-top: 10px;
@@ -692,7 +737,8 @@ input::placeholder {
     outline: 0;
     background: transparent;
     border-bottom: 1px solid black;
-    text-align: center
+    text-align: center;
+    font-size: 14px;
 }
 
 
@@ -999,6 +1045,7 @@ tr td{
  }
  .p_icon span{
      display: inline-flex !important;
+     margin: auto;
  }
  .p_icon{
     margin-top: 15px;
