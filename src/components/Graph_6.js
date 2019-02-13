@@ -2,10 +2,8 @@ import React, { Component } from "react";
 import Chart from "react-google-charts";
 
 class Graph_6 extends Component {
-
     render() {
         const graph6_values = JSON.parse(localStorage.getItem('google_graph6'));
-
         return (
             <div className="container">
                 <div className="row">
@@ -26,6 +24,7 @@ class Graph_6 extends Component {
                                     legendTextStyle: { color: '#000000', fontSize: 10 },
                                     chartArea: { width: '60%' },
                                     vAxis: {
+                                        format: '#.###\u20AC',
                                         title: 'Monatliche Kosten in €/Monat', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
                                             fontSize: 13,
                                             italic: false

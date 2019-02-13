@@ -43,12 +43,14 @@ class Graph_7 extends Component {
                                     },
                                     vAxes: {
                                         0: {
+                                            
                                             title: 'CO2-Äquivalent in t/a', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
                                                 fontSize: 13,
                                                 italic: false
                                             }
                                         },
                                         1: {
+                                            format: '#.###\u20AC',
                                             title: 'CO2-Vermeidungskosten in €/t', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
                                                 fontSize: 13,
                                                 italic: false

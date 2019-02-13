@@ -24,6 +24,7 @@ class Graph_5 extends Component {
                                     legendTextStyle: { color: '#000000', fontSize: 10 },
                                     chartArea: { width: '60%' },
                                     vAxis: {
+                                        format: '#.###\u20AC',
                                         title: 'Wartungskosten und Brennstoffkosten in €/a', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
                                             fontSize: 13,
                                             italic: false
