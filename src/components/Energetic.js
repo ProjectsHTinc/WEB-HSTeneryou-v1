@@ -7,7 +7,7 @@ import "react-tabs/style/react-tabs.css";
 import Graph_1 from './Graph_1';
 import Graph_2 from './Graph_2';
 import Graphmenu from './Graphmenu';
-import form_bg_3 from './images/form_3_bg.png';
+//import form_bg_3 from './images/form_3_bg.png';
 
 
 class Energetic extends Component {
@@ -24,9 +24,10 @@ class Energetic extends Component {
             <div className="container-fluid wrapper">
             <Header/>
             <h4 className="form_heading">Vergleichsübersicht der Produktkombinationen</h4>
-            <center><p className="product_heading_top">
-           Hier können Sie alle geeigneten Produktkombinationen im Detail miteinander vergleichen.</p>    </center>
-            <div className="container">
+            <center><p className="product_heading_top">Hier können Sie alle geeigneten Produktkombinationen im Detail miteinander vergleichen.</p>
+                
+            </center>
+                <div className="container">
                
                 <div className="row"  >
                 <div className="graph_box">
@@ -45,16 +46,14 @@ class Energetic extends Component {
                         </TabPanel>
                     </Tabs>
                     </div>
-
                     <div className="red_box">
-                        <center><span className="rec_box"></span><span className="red_text">Unsere Empfehlung für Selbstversorger</span></center>
+                    <center><span className="rec_box"></span><span className="red_text">Unsere Empfehlung für Preisorientierte</span></center>
                     </div>
-
-                   </div>
-                   </div>
                     
-                    <div className="container graph_table">
-                    <div class="table-responsive">
+                </div>
+                </div>
+                <div className="row graph_table" >
+                <div class="table-responsive">
                     <table class="table table-borderless" responsive>
                         <thead>
                             <tr>
@@ -120,9 +119,9 @@ class Energetic extends Component {
                             </tr>
                         </tbody>
                     </table>
-                </div>            
                 </div>
                 </div>
+               </div>
             <Footer/>
         </div>
         )

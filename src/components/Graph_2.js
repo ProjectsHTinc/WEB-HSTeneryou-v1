@@ -2,10 +2,8 @@ import React, { Component } from "react";
 import Chart from "react-google-charts";
 
 class Graph_2 extends Component {
-
     render() {
         const graph2_values = JSON.parse(localStorage.getItem('google_graph2'));
-
         return (
             <div className="container">
                 <div className="row">

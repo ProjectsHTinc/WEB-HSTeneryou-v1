@@ -6,7 +6,7 @@ import "react-tabs/style/react-tabs.css";
 
 import Graph_7 from './Graph_7';
 import Graphmenu from './Graphmenu';
-import form_bg_3 from './images/form_3_bg.png';
+//import form_bg_3 from './images/form_3_bg.png';
 
 
 class Emission extends Component {
@@ -115,11 +115,7 @@ class Emission extends Component {
                         </tbody>
                     </table>
                 </div>
-                
                 </div>
-
-                
-              
                 </div>
             <Footer/>
         </div>

@@ -2,10 +2,8 @@ import React, { Component } from "react";
 import Chart from "react-google-charts";
 
 class Graph_3 extends Component {
-
     render() {
         const graph3_values = JSON.parse(localStorage.getItem('google_graph3'));
-
         return (
             <div className="container">
                 <div className="row">
@@ -25,7 +23,7 @@ class Graph_3 extends Component {
                                     legendTextStyle: { color: '#000000', fontSize: 10 },
                                     chartArea: { width: '60%' },
                                     vAxis: {
-                                        format: '\u20AC#.##',
+                                       // format: '#.###,##\u20AC',
                                         title: 'Annuitätskosten in €/a', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
                                             fontSize: 13,
                                             italic: false

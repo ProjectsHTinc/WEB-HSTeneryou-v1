@@ -9,7 +9,7 @@ import Graph_4 from './Graph_4';
 import Graph_5 from './Graph_5';
 import Graph_6 from './Graph_6';
 import Graphmenu from './Graphmenu';
-import form_bg_3 from './images/form_3_bg.png';
+//import form_bg_3 from './images/form_3_bg.png';
 
 
 class Economicgraph extends Component {
@@ -130,9 +130,7 @@ class Economicgraph extends Component {
                         </tbody>
                     </table>
                 </div>
-                
                 </div>
-               
                </div>
             <Footer/>
         </div>

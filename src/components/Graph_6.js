@@ -38,7 +38,7 @@ class Graph_6 extends Component {
                                         }
                                     },
                                     seriesType: 'bars',
-                                    colors: ['#113969', '#4170aa'],
+                                    colors: ['#4170aa', '#113969'],
                                     animation: {
                                         startup: true,
                                         duration: 1500,

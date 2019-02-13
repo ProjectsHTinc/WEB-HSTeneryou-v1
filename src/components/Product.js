@@ -6,7 +6,7 @@ import product_1 from './images/product_1.png';
 import product_2 from './images/product_2.png';
 import product_3 from './images/product_3.png';
 
-import graph_img from './images/graph_icon.png';
+//import graph_img from './images/graph_icon.png';
 
 import error_img from './images/error_img.png';
 import img_loading from './images/loader.gif';
@@ -130,14 +130,6 @@ class Product extends Component {
                         });
                 });
             } 
-            // else if (response.status === 500) {
-            //     console.log("loaded");
-            //     response.json().then(response_data => {
-            //         this.setState({
-                        
-            //             });
-            //     });
-            // } 
         })
 
         .catch((error) => {
@@ -204,7 +196,6 @@ class Product extends Component {
 
             //console.log(disp_rows)
             
-
             if (i === 0) {
                 //recommentations_list_1_type.push(this.state.recommentations_value[0].type);
                 let furthering_1 = formatNumber(this.state.recommentations_value[0].furthering,{
@@ -233,7 +224,6 @@ class Product extends Component {
                     'suffix': ' €'
                 });
                 recommentations_list_1_operatingCost.push(operatingCost_1);
-                //recommentations_list_1_systemCombinationPosition.push(this.state.recommentations_value[0].systemCombinationPosition);
                 
                 let j = 0;
                 let products_1 = [];
@@ -297,7 +287,7 @@ class Product extends Component {
                     'suffix': ' €'
                 });
                 recommentations_list_2_investCost.push(investCost_2);
-                //recommentations_list_2_systemCombinationPosition.push(this.state.recommentations_value[1].systemCombinationPosition);
+
                 let k = 0;
                 let products_2 = [];
                 let componentName_2='';
@@ -359,7 +349,6 @@ class Product extends Component {
                     'suffix': ' €'
                 });
                 recommentations_list_3_investCost.push(investCost_3);
-                //recommentations_list_3_systemCombinationPosition.push(this.state.recommentations_value[2].systemCombinationPosition);
 
                 let l = 0;
                 let products_3 = [];
@@ -434,24 +423,23 @@ class Product extends Component {
             graph_2.push([systemCombinationPosition, energeticSelfSufficiency, energeticNetConsumption, energeticOwnConsumptionPV, energeticOwnConsumptionBHKW, energeticPowerSupplyPV, energeticPowerSupplyBHKW]);
         }
 
-        graph_3_1.push(['', 'Annuitätskosten','']);
+        graph_3_1.push(['', 'Annuitätskosten','','']);
         for (i = 0; i < this.state.systemCombinations_value.length; i++) {
             let systemCombinationPosition = String(this.state.systemCombinations_value[0].systemCombinationPosition);
             let economicValues = this.state.systemCombinations_value[0].economicValues;
             let annuityCost = economicValues['annuityCost'];
-                graph_3_1.push([systemCombinationPosition, annuityCost,'']);
+                graph_3_1.push([systemCombinationPosition, annuityCost,'','']);
             break;
         }
         for (i = 1; i < this.state.systemCombinations_value.length; i++) {
             let systemCombinationPosition = String(this.state.systemCombinations_value[i].systemCombinationPosition);
             let economicValues = this.state.systemCombinations_value[i].economicValues;
             let annuityCost = economicValues['annuityCost'];
-                graph_3_2.push([systemCombinationPosition, annuityCost,'']);
+                graph_3_2.push([systemCombinationPosition, annuityCost,'','']);
         }
 
 
         graph_4.push(['', 'annuityCost', 'Anschaffungskosten', '','Budgetobergrenze (€)','']);
-        //graph_4.push(['', 'annuityCost', 'Investitionskosten', 'Budgetobergrenze (€)']);
         for (i = 1; i < this.state.systemCombinations_value.length; i++) {
             let budget_value_amount = Number(localStorage.getItem('budget_value'));
             let systemCombinationPosition = String(this.state.systemCombinations_value[i].systemCombinationPosition);
@@ -463,7 +451,6 @@ class Product extends Component {
 
 
         graph_5.push(['', 'annuityCost', 'Wartungskosten','', 'Brennstoffkosten','']);
-        //graph_5.push(['', 'annuityCost', 'Betriebskosten', 'Brennstoffkosten']);
         for (i = 1; i < this.state.systemCombinations_value.length; i++) {
             let systemCombinationPosition = String(this.state.systemCombinations_value[i].systemCombinationPosition);
             let economicValues = this.state.systemCombinations_value[i].economicValues;
@@ -567,53 +554,154 @@ class Product extends Component {
         }
         
         let graph_3_values = [];
+        let tooltip_value_1;
+        let tooltip_value_2;
         for (let i = 0; i < graph_3.length; i++) {
+            
             if (i==0) { 
-                graph_3_values.push([graph_3[i][0],graph_3[i][1],{role: 'style'}]);
+                graph_3_values.push([graph_3[i][0],graph_3[i][1],{role: 'style'},{role:'tooltip'}]);
             }
            else if (i==2) { 
-                graph_3_values.push([graph_3[i][0],graph_3[i][1],'color:#e81515']);
+            tooltip_value_1 = formatNumber(graph_3[i][1], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ' €'
+                });
+                graph_3_values.push([graph_3[i][0],graph_3[i][1],'color:#e81515','Annuitätskosten : '+tooltip_value_1]);
             } else {
-                graph_3_values.push([graph_3[i][0],graph_3[i][1],'color:#4170aa']);
+                tooltip_value_1 = formatNumber(graph_3[i][1], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ' €'
+                });
+                graph_3_values.push([graph_3[i][0],graph_3[i][1],'color:#4170aa','Annuitätskosten  : '+tooltip_value_1]);
             }
         }
 
         let graph_4_values = [];
         for (let i = 0; i < graph_4.length; i++) {
             if (i==0) { 
-                graph_4_values.push([graph_4[i][0],graph_4[i][1],{role: 'style'},graph_4[i][3],{role: 'style'}]);
+                graph_4_values.push([graph_4[i][0],graph_4[i][1],{role: 'style'},{role:'tooltip'},graph_4[i][3],{role: 'style'},{role:'tooltip'}]);
             }
             else if (i==1) { 
-                graph_4_values.push([graph_4[i][0],graph_4[i][1],'color:#e81515',graph_4[i][2],'color:#000000']);
+                tooltip_value_1 = formatNumber(graph_4[i][1], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ' €'
+                });
+                tooltip_value_2 = formatNumber(graph_4[i][2], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ' €'
+                });
+                graph_4_values.push([graph_4[i][0],graph_4[i][1],'color:#e81515','Anschaffungskosten : '+tooltip_value_1,graph_4[i][2],'color:#000000','Budgetobergrenze  : '+tooltip_value_2]);
              } 
             else {
-                graph_4_values.push([graph_4[i][0],graph_4[i][1],'color:#4170aa',graph_4[i][2],'color:#000000']);
+                tooltip_value_1 = formatNumber(graph_4[i][1], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ' €'
+                });
+                tooltip_value_2 = formatNumber(graph_4[i][2], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ' €'
+                });
+                graph_4_values.push([graph_4[i][0],graph_4[i][1],'color:#4170aa','Anschaffungskosten : '+tooltip_value_1,graph_4[i][2],'color:#000000','Budgetobergrenze  : '+tooltip_value_2,]);
              }
          }
 
          let graph_5_values = [];
          for (let i = 0; i < graph_5.length; i++) {
              if (i==0) { 
-                 graph_5_values.push([graph_5[i][0],graph_5[i][1],{role: 'style'},graph_5[i][3],{role: 'style'}]);
+                 graph_5_values.push([graph_5[i][0],graph_5[i][1],{role: 'style'},{role:'tooltip'},graph_5[i][3],{role: 'style'},{role:'tooltip'}]);
              }
              else if (i==1) { 
-                 graph_5_values.push([graph_5[i][0],graph_5[i][1],'color:#fb5757',graph_5[i][3],'color:#e81515']);
+                tooltip_value_1 = formatNumber(graph_5[i][1], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ' €'
+                });
+                tooltip_value_2 = formatNumber(graph_5[i][3], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ' €'
+                });
+                 graph_5_values.push([graph_5[i][0],graph_5[i][1],'color:#fb5757','Wartungskosten : '+tooltip_value_1,graph_5[i][3],'color:#e81515','Brennstoffkosten : '+tooltip_value_2]);
               } 
              else {
-                 graph_5_values.push([graph_5[i][0],graph_5[i][1],'color:#4170aa',graph_5[i][3],'color:#113969']);
+                tooltip_value_1 = formatNumber(graph_5[i][1], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ' €'
+                });
+                tooltip_value_2 = formatNumber(graph_5[i][3], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ' €'
+                });
+                 graph_5_values.push([graph_5[i][0],graph_5[i][1],'color:#4170aa','Wartungskosten : '+tooltip_value_1,graph_5[i][3],'color:#113969','Brennstoffkosten : '+tooltip_value_2]);
               }
           }
 
         let graph_6_values = [];
          for (let i = 0; i < graph_6.length; i++) {
              if (i==0) { 
-                 graph_6_values.push([graph_6[i][0],graph_6[i][1],{role: 'style'},graph_6[i][3],{role: 'style'}]);
+                 graph_6_values.push([graph_6[i][0],graph_6[i][1],{role: 'style'},{role:'tooltip'},graph_6[i][3],{role: 'style'},{role:'tooltip'}]);
              }
-             else if (i==2) { 
-                 graph_6_values.push([graph_6[i][0],graph_6[i][1],'color:#fb5757',graph_6[i][3],'color:#e81515']);
+             else if (i==2) {
+                tooltip_value_1 = formatNumber(graph_6[i][1], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ' €'
+                });
+                tooltip_value_2 = formatNumber(graph_6[i][3], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ' €'
+                });
+                 graph_6_values.push([graph_6[i][0],graph_6[i][1],'color:#fb5757','Stromkosten : '+tooltip_value_1,graph_6[i][3],'color:#e81515','Heizkosten : '+tooltip_value_2]);
               } 
              else {
-                 graph_6_values.push([graph_6[i][0],graph_6[i][1],'color:#4170aa',graph_6[i][3],'color:#113969']);
+                tooltip_value_1 = formatNumber(graph_6[i][1], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ' €'
+                });
+                tooltip_value_2 = formatNumber(graph_6[i][3], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ' €'
+                });
+                 graph_6_values.push([graph_6[i][0],graph_6[i][1],'color:#4170aa','Stromkosten : '+tooltip_value_1,graph_6[i][3],'color:#113969','Heizkosten : '+tooltip_value_2]);
               }
           }
 
@@ -621,13 +709,27 @@ class Product extends Component {
           let graph_7_values = [];
          for (let i = 0; i < graph_7.length; i++) {
              if (i==0) { 
-                 graph_7_values.push([graph_7[i][0],graph_7[i][1],{role: 'style'},graph_7[i][3],{role: 'style'}]);
+                 graph_7_values.push([graph_7[i][0],graph_7[i][1],{role: 'style'},graph_7[i][3],{role: 'style'},{role:'tooltip'}]);
              }
              else if (i==2) { 
-                 graph_7_values.push([graph_7[i][0],graph_7[i][1],'color:#e81515',graph_7[i][3],'color:#e88e00']);
+                tooltip_value_2 = formatNumber(graph_7[i][3], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ' €'
+                });
+                 graph_7_values.push([graph_7[i][0],graph_7[i][1],'color:#e81515',graph_7[i][3],'color:#e88e00','CO2-Vermeidungskosten : '+tooltip_value_2]);
               } 
              else {
-                 graph_7_values.push([graph_7[i][0],graph_7[i][1],'color:#2fa057',graph_7[i][3],'color:#e88e00']);
+                tooltip_value_2 = formatNumber(graph_7[i][3], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ' €'
+                });
+                 graph_7_values.push([graph_7[i][0],graph_7[i][1],'color:#2fa057',graph_7[i][3],'color:#e88e00','CO2-Vermeidungskosten : '+tooltip_value_2]);
               }
           }
 
