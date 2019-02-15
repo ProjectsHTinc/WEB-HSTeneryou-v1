@@ -50,11 +50,15 @@ class Graph_2 extends Component {
                        
                     </div>
                     <div className="col-md-1"></div>
-
-
                 </div>
-            </div>
+               
+                <div className="row"> 
+                    <div className="red_box text-center" >
+                            {/* <center><span className="rec_box"></span><span className="red_text">Unsere Empfehlung für Preisorientierte</span></center> */}
+                    </div>
+                </div>
 
+            </div>
         )
     }
 }
