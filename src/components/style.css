@@ -38,6 +38,8 @@ html {
     color: #2171b9;
     font-size: 15px;
     font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
   body {
      position: relative;
@@ -300,7 +302,7 @@ input[type='radio']:checked:before {
 .p_text_box{
     text-align: center;
     border: 2px solid #2171b9;
-    border-radius: 10px;
+    border-radius: 5px;
     padding-top: 5px;
     padding-bottom: 10px;
     margin-bottom: 5px;
@@ -320,7 +322,7 @@ input[type='radio']:checked:before {
 .d_direction_div{
     text-align: center;
     border: 2px solid #2171b9;
-    border-radius: 10px;
+    border-radius: 5px;
     padding-top: 5px;
     padding-bottom: 10px;
     margin-left: 0px;
@@ -334,10 +336,12 @@ input[type='radio']:checked:before {
     color: #2171b9;
     font-size: 15px;
     font-weight: 600;
+    margin-bottom: 5px;
+    margin-top: 5px;
 }
 .living_box_house{
     border: 2px solid #2171b9;
-    border-radius: 15px;
+    border-radius: 5px;
     
     padding-top: 5px;
     padding-bottom: 5px;
@@ -524,7 +528,7 @@ input::placeholder {
 }
 .p_icon{
     margin: auto;
-    display: inline-flex;
+    display:inline-block;
     padding: 0px 0px 0px 14px;
     width:100%;
 }
