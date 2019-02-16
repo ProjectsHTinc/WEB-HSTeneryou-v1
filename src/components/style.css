@@ -70,6 +70,7 @@ html {
     /* padding:8px; */
     /* background-color: #efefef; */
     text-align: center;
+    margin-bottom: 0px;
 
 }
 .bg-dark {
@@ -453,7 +454,7 @@ input::placeholder {
     margin-top: 5px;
 }
 .power_label{
-    padding: 15px 73px 15px 54px;
+    padding: 15px 75px 15px 54px;
     margin-bottom: 0px;
     background-color: #2171b9;
     color: #fff;
@@ -1168,7 +1169,8 @@ tr td{
          text-align: center;
      }
      .person_label{
-         padding: 5px;
+         /* padding: 5px; */
+         padding: 15px 10px 15px 20px;
          margin: 0px;
      }
      .icon{
@@ -1179,19 +1181,28 @@ tr td{
          padding: 0px;
      }
      .p_form_label{
-        padding: 5px 5px 5px 5px;
+        padding: 15px 10px 15px 20px;
+     }
+     .p_consuption{
+         width: 50%;
+     }
+     .person_question{
+         text-align: center;
      }
      .power_label{
-        padding: 5px;
+        padding: 15px 32px 15px 20px;
         margin: 0px;
      }
      .power_text_consumption{
          padding: 0px;
-         width: 155px;
+         width: 100px;
      }
      .kwh{
-         padding: 0px;
+        padding: 15px 10px 15px 20px;
          margin: 0px;
+     }
+     .p_box{
+         margin-top: 230px;
      }
     .form_1_bg{
         background-size: contain;
