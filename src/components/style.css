@@ -29,6 +29,7 @@ html {
     font-size: 14px;
     color: #fff;
     margin: auto;
+    font-weight: 600;
 }
 .form-control{
     font-size: 14px;
@@ -70,7 +71,7 @@ html {
     /* padding:8px; */
     /* background-color: #efefef; */
     text-align: center;
-    margin-bottom: 0px;
+    margin-bottom: -1px;
 
 }
 .bg-dark {
@@ -994,6 +995,9 @@ tr td{
     color: red;
     
 }
+.budget_price::placeholder {
+    color: #000;
+  }
                   
 
 
@@ -1133,9 +1137,12 @@ tr td{
         padding: 0px;
     }
     .p_icon{
-        padding: 0px;
+        /* padding: 0px; */
     }
- 
+    .icon{
+        margin-left: 5px;
+        margin-right: 5px;
+    }
 } 
 
 

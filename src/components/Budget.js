@@ -130,10 +130,10 @@ class Budget extends Component {
                         </div>
                         <div className="budget_box">
                         <input type="text"  className="form-control"
-                            name="budget_value"
+                            name="budget_value" placeholder='in (€) eingeben'
                             ref={(budget_value) => this.budget_value = budget_value}
                             onChange={this.props.handleChange('budget_value')}
-                             className="budget_price" placeholder='in (€) eingeben' defaultValue={values.budget_value} />
+                             className="budget_price"  defaultValue={values.budget_value} />
                                <p  className="error_font">{this.state.errors["budget_value"]}</p>
                         </div>
                         <div className="form_btn">
