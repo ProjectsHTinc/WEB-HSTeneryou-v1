@@ -936,7 +936,7 @@ tr td{
 }
 .table td, .table th{
     border-top: 1px solid #e0eefd59;
-    padding: 7px;
+    padding: 6px;
 }
 .price_cost{
     text-align: right;
