@@ -71,7 +71,7 @@ html {
     /* padding:8px; */
     /* background-color: #efefef; */
     text-align: center;
-    margin-bottom: -1px;
+    margin-bottom: -2px;
 
 }
 .bg-dark {
@@ -1238,6 +1238,7 @@ tr td{
         line-height: 20px;
         padding-top: 10px;
         padding-bottom: 20px;
+        margin-bottom: 0px;
     }
     .post_textbox{
         letter-spacing: 5px;
