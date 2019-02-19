@@ -751,7 +751,7 @@ class Product extends Component {
             return (
                 <div className="container-fluid wrapper">
                     <Header />
-                    <div className="container">
+                    <div className="container pageTop" >
                         
                          <h4 className="form_heading">Unsere Produktempfehlungen für Sie</h4>
                         <center><p className="product_heading_top">Wir haben geeignete Strom- und Wärmelösungen für Ihre Immobilie simuliert und verglichen.<br></br>
@@ -910,7 +910,7 @@ Zur Vergleichsübersicht
             return (
                 <div className="container-fluid wrapper">
                     <Header />
-                    <div className="container">
+                    <div className="container pageTop">
                         <div className="row product_recommendation">
                             <div className="col-md-12 col-lg-12 col-sm-12 text-center" style={{marginTop:'30px'}}>
                                 {/* <p>{error_values_field}</p> */}
@@ -935,7 +935,7 @@ Zur Vergleichsübersicht
             return (
                 <div className="container-fluid wrapper">
                     <Header />
-                    <div className="container">
+                    <div className="container pageTop">
                         <div className="row product_recommendation">
                             <div className="col-md-12 col-lg-12 col-sm-12" style={{marginTop:'30px'}}>
                             <p className="text-center">

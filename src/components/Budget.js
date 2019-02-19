@@ -137,7 +137,7 @@ class Budget extends Component {
                                <p  className="error_font">{this.state.errors["budget_value"]}</p>
                         </div>
                         <div className="form_btn">
-                            <button  onClick={this.continue}  className="btn btn_submit">Speichern</button>
+                            <button  onClick={this.continue}  className="btn btn_submit">Berechnen</button>
                         </div>
                       
 

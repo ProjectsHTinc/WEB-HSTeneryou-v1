@@ -23,7 +23,7 @@ class Economicgraph extends Component {
 
     render(){
         return(
-            <div className="container-fluid wrapper">
+            <div className="container-fluid wrapper pageTop">
             <Header/>
             <h4 className="form_heading">Vergleichsübersicht der Produktkombinationen</h4>
             <center><p className="product_heading_top">Hier können Sie alle geeigneten Produktkombinationen im Detail miteinander vergleichen.</p>
