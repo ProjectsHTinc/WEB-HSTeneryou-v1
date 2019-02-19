@@ -108,7 +108,7 @@ class Product extends Component {
                 'Access-Control-Allow-Origin': '*',
             },
         })
-       
+
         .then(response => {
              localStorage.setItem("response_status",response.status)
             this.setState({"status":response.status})
@@ -540,22 +540,79 @@ class Product extends Component {
         })
         graph_7 = graph_7_1.concat(graph_7_2);
 
+        let tooltip_value_1;
+        let tooltip_value_2;
+        let tooltip_value_3;
+        let tooltip_value_4;
+        let tooltip_value_5;
+        let tooltip_value_6;
 
         let graph_1_values = [];
         for (let i = 0; i < graph_1.length; i++) {
             if (i==0) { 
-                graph_1_values.push([graph_1[i][0],graph_1[i][1],{role: 'style'}]);
+                graph_1_values.push([graph_1[i][0],graph_1[i][1],{role: 'style'},{role:'tooltip'}]);
             }
            else if (i==1) { 
-                graph_1_values.push([graph_1[i][0],graph_1[i][1],'color:#e81515']);
+                tooltip_value_1 = graph_1[i][1];
+                graph_1_values.push([graph_1[i][0],graph_1[i][1],'color:#e81515','Autarkiegrad : '+tooltip_value_1+'%']);
             } else {
-                graph_1_values.push([graph_1[i][0],graph_1[i][1],'color:#cba550']);
+                tooltip_value_1 = graph_1[i][1];
+                graph_1_values.push([graph_1[i][0],graph_1[i][1],'color:#cba550','Autarkiegrad : '+tooltip_value_1+'%']);
             }
         }
         
+
+        let graph_2_values = [];
+        for (let i = 0; i < graph_1.length; i++) {
+            if (i==0) { 
+                graph_2_values.push([graph_2[i][0],graph_2[i][1],{role: 'style'},{role:'tooltip'},graph_2[i][2],{role: 'style'},{role:'tooltip'},graph_2[i][3],{role: 'style'},{role:'tooltip'},graph_2[i][4],{role: 'style'},{role:'tooltip'},graph_2[i][5],{role: 'style'},{role:'tooltip'}]);
+            }
+           else {
+                tooltip_value_1 = formatNumber(graph_2[i][1], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ''
+                });
+                tooltip_value_2 = formatNumber(graph_2[i][2], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ''
+                });
+                tooltip_value_3 = formatNumber(graph_2[i][3], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ''
+                });
+                tooltip_value_4 = formatNumber(graph_2[i][4], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ''
+                });
+                tooltip_value_5 = formatNumber(graph_2[i][5], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ''
+                });
+                
+                graph_2_values.push([graph_2[i][0],graph_2[i][1],'color:#cba550','Netzbezug : '+tooltip_value_1,graph_2[i][2],'color:#9851b9','Eigenverbrauch-PV : '+tooltip_value_2,graph_2[i][3],'color:#239b03','Eigenverbrauch-BHKW : '+tooltip_value_3,graph_2[i][4],'color:#039b92','Einspeisung-PV : '+tooltip_value_4,graph_2[i][5],'color:#4170aa','Einspeisung-BHKW : '+tooltip_value_5]);
+            }
+        }
+
+
+//console.log(graph_2_values);
+
+
         let graph_3_values = [];
-        let tooltip_value_1;
-        let tooltip_value_2;
         for (let i = 0; i < graph_3.length; i++) {
             
             if (i==0) { 
@@ -709,9 +766,16 @@ class Product extends Component {
           let graph_7_values = [];
          for (let i = 0; i < graph_7.length; i++) {
              if (i==0) { 
-                 graph_7_values.push([graph_7[i][0],graph_7[i][1],{role: 'style'},graph_7[i][3],{role: 'style'},{role:'tooltip'}]);
+                 graph_7_values.push([graph_7[i][0],graph_7[i][1],{role: 'style'},{role:'tooltip'},graph_7[i][3],{role: 'style'},{role:'tooltip'}]);
              }
              else if (i==2) { 
+                tooltip_value_1 = formatNumber(graph_7[i][1], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ''
+                });
                 tooltip_value_2 = formatNumber(graph_7[i][3], {
                     'decimal': ',',
                     'grouping': '.',
@@ -719,9 +783,16 @@ class Product extends Component {
                     'prefix': '',
                     'suffix': ' €'
                 });
-                 graph_7_values.push([graph_7[i][0],graph_7[i][1],'color:#e81515',graph_7[i][3],'color:#e88e00','CO2-Vermeidungskosten : '+tooltip_value_2]);
+                 graph_7_values.push([graph_7[i][0],graph_7[i][1],'color:#e81515','CO2-Emission in t/a : '+tooltip_value_1,graph_7[i][3],'color:#e88e00','CO2-Vermeidungskosten : '+tooltip_value_2]);
               } 
              else {
+                tooltip_value_1 = formatNumber(graph_7[i][1], {
+                    'decimal': ',',
+                    'grouping': '.',
+                    'fraction': 2,
+                    'prefix': '',
+                    'suffix': ''
+                });
                 tooltip_value_2 = formatNumber(graph_7[i][3], {
                     'decimal': ',',
                     'grouping': '.',
@@ -729,13 +800,13 @@ class Product extends Component {
                     'prefix': '',
                     'suffix': ' €'
                 });
-                 graph_7_values.push([graph_7[i][0],graph_7[i][1],'color:#2fa057',graph_7[i][3],'color:#e88e00','CO2-Vermeidungskosten : '+tooltip_value_2]);
+                 graph_7_values.push([graph_7[i][0],graph_7[i][1],'color:#2fa057','CO2-Emission in t/a : '+tooltip_value_1,graph_7[i][3],'color:#e88e00','CO2-Vermeidungskosten : '+tooltip_value_2]);
               }
           }
 
 
         localStorage.setItem("google_graph1", JSON.stringify(graph_1_values));
-        localStorage.setItem("google_graph2", JSON.stringify(graph_2));
+        localStorage.setItem("google_graph2", JSON.stringify(graph_2_values));
         localStorage.setItem("google_graph3", JSON.stringify(graph_3_values));
         localStorage.setItem("google_graph4", JSON.stringify(graph_4_values));
         localStorage.setItem("google_graph5", JSON.stringify(graph_5_values));
@@ -751,7 +822,7 @@ class Product extends Component {
             return (
                 <div className="container-fluid wrapper">
                     <Header />
-                    <div className="container pageTop" >
+                    <div className="container">
                         
                          <h4 className="form_heading">Unsere Produktempfehlungen für Sie</h4>
                         <center><p className="product_heading_top">Wir haben geeignete Strom- und Wärmelösungen für Ihre Immobilie simuliert und verglichen.<br></br>
@@ -910,7 +981,7 @@ Zur Vergleichsübersicht
             return (
                 <div className="container-fluid wrapper">
                     <Header />
-                    <div className="container pageTop">
+                    <div className="container">
                         <div className="row product_recommendation">
                             <div className="col-md-12 col-lg-12 col-sm-12 text-center" style={{marginTop:'30px'}}>
                                 {/* <p>{error_values_field}</p> */}
@@ -935,7 +1006,7 @@ Zur Vergleichsübersicht
             return (
                 <div className="container-fluid wrapper">
                     <Header />
-                    <div className="container pageTop">
+                    <div className="container">
                         <div className="row product_recommendation">
                             <div className="col-md-12 col-lg-12 col-sm-12" style={{marginTop:'30px'}}>
                             <p className="text-center">
