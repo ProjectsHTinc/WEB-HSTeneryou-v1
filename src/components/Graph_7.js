@@ -44,7 +44,7 @@ class Graph_7 extends Component {
                                     vAxes: {
                                         0: {
                                             
-                                            title: 'CO2-Äquivalent in t/a', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
+                                            title: 'CO2-Emission in t/a', textStyle: { color: '#000000', fontSize: 13 }, titleTextStyle: {
                                                 fontSize: 13,
                                                 italic: false
                                             }

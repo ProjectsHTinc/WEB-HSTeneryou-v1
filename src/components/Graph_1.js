@@ -51,7 +51,7 @@ class Graph_1 extends Component {
                 
                 <div className="row"> 
                     <div className="red_box text-center">
-                        <center><span className="rec_box"></span><span className="red_text">Unsere Empfehlung für Preisorientierte</span></center>
+                        <center><span className="rec_box"></span><span className="red_text">Unsere Empfehlung für Selbstversorger</span></center>
                     </div>
                 </div>
 
