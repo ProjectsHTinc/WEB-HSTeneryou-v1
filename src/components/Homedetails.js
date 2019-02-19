@@ -205,7 +205,7 @@ class Homedetails extends Component {
 
                                     <div className="col-md-2 col-sm-6">
                                         {/* <label for="female">Female</label> */}
-                                        <div className="radio_box inputGroup  DEGREES_0" for="0">
+                                        <div className="radio_box inputGroup  DEGREES_0 " for="0">
                                             <input type="radio"
                                                 value="DEGREES_0"
                                                 id="0"
