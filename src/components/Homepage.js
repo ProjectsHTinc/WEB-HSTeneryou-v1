@@ -76,7 +76,7 @@ class Homepage extends Component {
            <a href="/Form">
            <img src={require('./images/home_icon.png')} alt="ENER YOU" className="object"/> 
            </a>
-           <p className="home_text">Finden Sie die passenden Energielösungen für Ihre Immobile</p>
+           <p className="home_text">Finden Sie die passenden Energielösungen für Ihre Immobilie</p>
            </p>
           
         </div>
