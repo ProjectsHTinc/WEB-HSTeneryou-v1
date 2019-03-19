@@ -100,7 +100,7 @@ class Product extends Component {
               }
           }
 
-        fetch("http://52.15.238.228:8080/eneryou/api/recommentations", {
+        fetch("http://3.16.89.94:8080/eneryou/api/recommentations", {
             method: 'POST',
             body: JSON.stringify(data),
             headers: {
@@ -154,14 +154,17 @@ class Product extends Component {
         let recommentations_list_1_furthering = [];
         let recommentations_list_1_investCost = [];
         let recommentations_list_1_operatingCost = [];
+
         let recommentations_list_2 = [];
         let recommentations_list_2_furthering = [];
         let recommentations_list_2_investCost = [];
         let recommentations_list_2_operatingCost = [];
+
         let recommentations_list_3 = [];
         let recommentations_list_3_furthering = [];
         let recommentations_list_3_investCost = [];
         let recommentations_list_3_operatingCost = [];
+        
         let error_values_field = [];
         let error_values_message = [];
         let disp_rows;
